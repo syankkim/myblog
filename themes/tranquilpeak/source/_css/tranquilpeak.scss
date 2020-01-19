@@ -1,6 +1,10 @@
 @import
-    'utils/fonts',
-    'utils/variables';
+'utils/fonts',
+'utils/variables';
+
+@import
+    url(http://fonts.googleapis.com/earlyaccess/notosanskr.css),
+    url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
 
 @import
     'utils/mixins/bottom-bar',
@@ -57,7 +61,8 @@
     'components/tag',
     'components/text',
     'components/tooltip',
-    'components/video';
+    'components/video',
+    'components/popular';
 
 @import
     'pages/search';

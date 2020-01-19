@@ -34,9 +34,9 @@
                     <% } else { %>
                         <a  class="sidebar-button-link <% if (theme.sidebar[i][n].class) { %><%= theme.sidebar[i][n].class %><% } %>"
                             <% if (theme.sidebar[i][n].url.indexOf("/") === 0 && theme.sidebar[i][n].url.length === 1) { %> href="<%- url_for(' ') %>"
-                            <% } else if (theme.sidebar[i][n].url.indexOf("/") === 0) { %> href="<%- url_for(theme.sidebar[i][n].url.substr(1)) %>"
+                            <% } else if (theme.sidebar[i][n].url.indexOf("/") === 0) { %> 
+                            title="<%= __(theme.sidebar[i][n].title) %>"href="<%- url_for(theme.sidebar[i][n].url.substr(1)) %>"
                             <% } else { %> href="<%- url_for(theme.sidebar[i][n].url) %>"<% } %>
-                            title="<%= __(theme.sidebar[i][n].title) %>"
                         >
                     <% } %>
                         <i class="sidebar-button-icon <%= theme.sidebar[i][n].icon %>" aria-hidden="true"></i>

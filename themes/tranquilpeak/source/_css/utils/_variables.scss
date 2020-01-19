@@ -6,8 +6,10 @@ $open-sans:            'Open Sans';
 $open-sans-sans-serif: 'Open Sans', sans-serif;
 $merriweather-serif:   'Merriweather', serif;
 $monospace:             Menlo, Consolas, monospace;
+$noto-sans-kr:          'Noto Sans KR', sans-serif;
+$nanum-gothic-coding:   'Nanum Gothic Coding', monospace;
 
-$font-family-base: $open-sans-sans-serif;
+$font-family-base: $$noto-sans-kr;
 
 $font-families: (
    // base

@@ -32,7 +32,7 @@ sidebar:
     menu:
         home:
             title: global.home
-            url: /
+            url: https://ksso730.github.io
             icon: fa fa-home
         categories:
             title: global.categories
@@ -58,25 +58,25 @@ sidebar:
             icon: fa fa-question
     author_links:
         github:
-            title: global.github
-            url: https://github.com/
+            title: my github
+            url: https://github.com/ksso730
             icon: fab fa-github
-        stack_overflow:
-            title: global.stack_overflow
-            url: http://stackoverflow.com/users
-            icon: fab fa-stack-overflow
-        twitter:
-            title: global.twitter
-            url: https://twitter.com/
-            icon: fab fa-twitter
-        facebook:
-            title: global.facebook
-            url: https://facebook.com/
-            icon: fab fa-facebook
-        google_plus:
-            title: global.google_plus
-            url: https://plus.google.com/
-            icon: fab fa-google-plus
+        # stack_overflow:
+        #     title: global.stack_overflow
+        #     url: http://stackoverflow.com/users
+        #     icon: fab fa-stack-overflow
+        # twitter:
+        #     title: global.twitter
+        #     url: https://twitter.com/
+        #     icon: fab fa-twitter
+        # facebook:
+        #     title: global.facebook
+        #     url: https://facebook.com/
+        #     icon: fab fa-facebook
+        # google_plus:
+        #     title: global.google_plus
+        #     url: https://plus.google.com/
+        #     icon: fab fa-google-plus
         linked_in:
             title: global.linkedin
             url: https://www.linkedin.com/profile/
@@ -150,7 +150,7 @@ author:
 # large sidebar is swiped on all lower screens
 # 5: Display header bar on all screens and large sidebar is swiped on large screen
 # 6: Display header bar on all screens and medium sidebar is swiped
-sidebar_behavior: 1
+sidebar_behavior: 2
 # Hide sidebar on all article page to let article take full width to improve reading, and
 # enjoy wide images and cover images. (true: enable, false: disable)
 clear_reading: true

@@ -74,6 +74,7 @@ post:
     comment_and_share: "댓글 공유"
     comment: "댓글을 남겨주세요"
     share: "이 포스트 공유하기"
+    related: "연관 포스트"
     gallery: "갤러리"
     image:
         one: "이미지"

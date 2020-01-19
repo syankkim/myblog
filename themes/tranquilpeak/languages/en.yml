@@ -74,6 +74,7 @@ post:
     comment_and_share: "Comment and share"
     comment: "Leave a comment"
     share: "Share this post"
+    related: "Related Post"
     gallery: "Gallery"
     image:
         one: "image"

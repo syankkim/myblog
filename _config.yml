@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: "동글씨"
+subtitle: "동글씨의 LOG"
 description: ''
 keywords:
-author: Suyan Kim
-language: en
-timezone: ''
+author: "Suyan Kim"
+language: "en"
+timezone: "Asia/Seoul"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

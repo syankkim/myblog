@@ -22,5 +22,20 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0"
-  }
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksso730/myblog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksso730/myblog/issues"
+  },
+  "homepage": "https://github.com/ksso730/myblog#readme",
+  "description": ""
 }

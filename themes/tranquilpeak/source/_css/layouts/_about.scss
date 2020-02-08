@@ -18,7 +18,7 @@
         // Position the card out the page to improve the javascript drop effect
         top:           -1000px;
         display:       block;
-        background:    rgb(220, 224, 241);
+        background:    rgb(78, 61, 67);
         max-width:     400px;
         margin:        15px auto;
         border-radius: 3px;
@@ -43,6 +43,7 @@
         #about-card-name {
             margin-top:    0;
             margin-bottom: 20px;
+            color: wheat;
         }
         #about-card-bio {
             padding: 0 30px;
@@ -59,7 +60,8 @@
             font-size:   $font-size-base;
             line-height: $line-height-base;
             font-weight: 400;
-            color:       map-get($colors, base);
+            color: white;
+            // color:       map-get($colors, base);
         }
     }
 }

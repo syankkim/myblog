@@ -30,12 +30,12 @@ image_dir: assets/images
 #                               # Go to https://fontawesome.com/icons?d=gallery&m=free to find icons you want
 sidebar:
     menu:
-        search:
-            title: global.search
-            url: /#search
-            icon: fa fa-search
-            # `open-algolia-search` classes are used to open algolia search modal
-            class: open-algolia-search
+        # search:
+        #     title: global.search
+        #     url: /#search
+        #     icon: fa fa-search
+        #     # `open-algolia-search` classes are used to open algolia search modal
+        #     class: open-algolia-search
         home:
             title: global.home
             url: https://ksso730.github.io
@@ -117,13 +117,13 @@ header:
 
 # Your biography and your job is editable in each languages files in `languages` folder
 author:
-    email:
-    location:
+    email: ksso7300@gmail.com
+    location: Korea
     # Your profile picture located in folder `source/_images/` (development)
     # or in `source/assets/images/` (production)
     # or you can use an external url
     # Overwritten by your gravatar image if `gravatar_email` is filled
-    picture:
+    picture: #dongle.png
     # Your Twitter username without the @. E.g : `tranquilpeak`
     twitter:
     # Your personal google plus profile id, not your blog or business page id.
@@ -240,7 +240,7 @@ google_analytics_id:
 # Your Baidu analystics web property ID : 9505a5af654a2478f93fd6c0ae4f687d
 baidu_analytics_id:
 # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-gravatar_email:
+gravatar_email: ksso7300@gmail.com
 # Your Facebook user ids used to connect your blog with your facebook user accounts (Facebook Insights). Separate ids with comma. e.g : 9830047,1003342
 fb_admin_ids:
 # Your Facebook app id used to connect your blog with your facebook app account (Facebook Insights). E.g : 9841307

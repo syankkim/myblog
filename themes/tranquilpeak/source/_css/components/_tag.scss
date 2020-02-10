@@ -12,6 +12,23 @@ a.tag,
     margin-bottom:  7px;
 }
 
+a.side-tag,
+.side-tag{
+    display:        block;
+    width:          auto;
+    height:         auto;
+    cursor:         pointer;
+    margin:         0;
+    margin-bottom:  7px;
+    color: wheat;
+    text-decoration: none;
+    text-decoration-style: none; 
+    padding-left: 30px;
+    margin-bottom: 3px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    width: auto; height: auto;
+}
+
 // Colors variant
 a.tag--default,
 .tag--default {

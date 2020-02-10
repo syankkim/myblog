@@ -44,10 +44,10 @@ sidebar:
         #     title: global.categories
         #     url: /all-categories
         #     icon: fa fa-bookmark
-        tags:
-            title: global.tags
+        categories:
+            title: global.categories
             url: /all-tags
-            icon: fa fa-tags
+            icon: fa fa-bookmark
         archives:
             title: global.archives
             url: /all-archives

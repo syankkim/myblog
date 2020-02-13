@@ -67,7 +67,7 @@ post:
     no_title : "no title"
     categorized_in: "in"
     tagged_in: "TAGGED IN"
-    toc: "Table of Contents"
+    toc: "Contents"
     back_to_top: "Back to top"
     read_more: "Continue reading"
     go_to_website: "Go to website"

@@ -38,7 +38,7 @@ sidebar:
         #     class: open-algolia-search
         home:
             title: global.home
-            url: https://ksso730.github.io
+            url: /index.html
             icon: fa fa-home
         # categories:
         #     title: global.categories

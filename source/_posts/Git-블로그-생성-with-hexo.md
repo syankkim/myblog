@@ -98,6 +98,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 > _"Grunt is a task-based command line build tool for JavaScript projects."_
 grunt 는 JavaScript Task Runner, JavaScript 자동화 툴이다.
 <br/>
+
 ###### Grunt 사용
 grunt 사용은 npm 을 통해 이루어진다. Node.js 가 설치되었다는 전제에 grunt를 설치한다.
 설치는 프로젝트의 root 경로에서 진행한다.
@@ -130,3 +131,5 @@ $ hexo d // 또는 $ hexo g -d : generate 와 deploy 를 한번에 수행.
 
 <img width="263" alt="theme_in_config" src="https://user-images.githubusercontent.com/28856435/74512784-5d523980-4f4c-11ea-9c76-0f8204fe3be5.png">
 <br/>
+
+다시 `hexo s` 를 실행하여 localhost 에서 확인을 해보면 테마가 적용된것을 확인할 수 있다.

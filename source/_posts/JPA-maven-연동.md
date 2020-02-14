@@ -16,7 +16,7 @@ JPA 처음 시작하기. 연동과정을 알아보고 H2 를 이용한 기본 CR
 *인프런 강의를 보고 공부하며 작성한 포스트입니다.*
 <br/>
 
-### JPA - maven 연동
+### JPA - maven 연동설정
 
 #### pom.xml
  1) jpa 하이버네이트 
@@ -59,7 +59,7 @@ JPA 처음 시작하기. 연동과정을 알아보고 H2 를 이용한 기본 CR
 
 ---
 
-### Hello JPA    
+### Hello JPA 실습
 
 ####  Could not load requested class : org.h2.Driver
 

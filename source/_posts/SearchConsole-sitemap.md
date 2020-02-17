@@ -1,5 +1,5 @@
 ---
-title: Google search console, sitemap
+title: Google Search Console, Sitemap
 tags: Git
 categories: []
 thumbnail: ''
@@ -25,6 +25,8 @@ hexo 플러그인을 이용해 Google search console 에 github 블로그 소유
 
 ### sitemap.xml 등록하기
 
+##### hexo sitemap 플러그인 설치
+
 필자는 `hexo` 를 사용중이기에 hexo 플러그인을 사용해 sitemap 을 생성해주도록 설정했다.
 
 아래 명령을 실행해 플러그인을 설치한다.
@@ -38,5 +40,16 @@ sitemap:
     path: sitemap.xml
 ```
 
-![image](https://user-images.githubusercontent.com/28856435/74670458-8d1f6c80-51ec-11ea-8e7b-c851a0f7694a.png)
+그리고 배포하면 이렇게 자동 생성된 파일들을 확인할 수 있다.
 
+![image](https://user-images.githubusercontent.com/28856435/74671260-1d11e600-51ee-11ea-810c-83422a1e4544.png)
+<br/>
+
+##### Search Console 에 Sitemap 등록
+Google Search Console 에서 sitemap 을 올린 경로로 등록해준다.
+
+sitemap 에 성공했다 !
+
+![image](https://user-images.githubusercontent.com/28856435/74671401-71b56100-51ee-11ea-9bdb-1ec55b30eea5.png)
+
+![image](https://user-images.githubusercontent.com/28856435/74671443-8abe1200-51ee-11ea-947f-f901b7b9628c.png)

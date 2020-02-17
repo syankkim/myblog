@@ -1,5 +1,5 @@
 ---
-title: Google Search Console, Sitemap
+title: 구글 검색엔진 +사이트맵 생성
 tags: Git
 categories: []
 thumbnail: ''
@@ -7,7 +7,7 @@ permalink: ''
 date: 2020-02-17 22:54:49
 ---
 
-hexo 플러그인을 이용해 Google search console 에 github 블로그 소유권을 인증하고 xml 을 등록해봅니다.
+hexo 플러그인을 이용해 Google Search Console 에 github 블로그 소유권을 인증하고 사이트맵을 등록해봅니다.
 <!-- excerpt -->
 <!-- toc -->
 

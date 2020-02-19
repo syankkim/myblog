@@ -27,9 +27,10 @@ If you're receiving this error, then you need to replace all URL references to M
 Central Repository  는 일반 HTTP를 통한 통신을 지원하지 않으며 `HTTPS` 를 통해 암호화 되어야 한다는 이야기다. settings.xml 에 Maven Central 에 대한 URL 참조를 `HTTP -> HTTPS` 로 바꿔주면 된다.
 
 아래와 같이 <url> 값을 바꿔주고 <pluginRepositories> 설정을 추가해준다.
+
 ---
 
-##### maven 501 해결법 ?
+#### maven 501 해결법 ?
 
 __settings.xml 에 수정__
 
@@ -84,7 +85,7 @@ __settings.xml 에 수정__
 [ERROR]     Non-resolvable parent POM for com.olleh.gigaeyes:gigaeyes-cvsaas-ems:1.3.3: Could not transfer artifact org.springframework.boot:spring-boot-starter-parent:pom:1.5.2.RELEASE from/to central (https://repo.maven.apache.org/maven2): Transfer failed for https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/1.5.2.RELEASE/spring-boot-starter-parent-1.5.2.RELEASE.pom and 'parent.relativePath' points at no local POM @ line 12, column 10: Received fatal alert: protocol_version -> [Help 2]
 ```
 
-##### protocol_version 해결법 ?
+#### protocol_version 해결법 ?
 
 JDK 버전에 따라 지원하는 TLS 버전이 달랐다
 
@@ -108,6 +109,8 @@ $ mvn install -Dhttps.protocols=TLSv1.2
 ```bash
 [ERROR] Failed to execute goal on project gigaeyes-cvsaas-ems: Could not resolve dependencies for project com.olleh.gigaeyes:gigaeyes-cvsaas-ems:war:1.3.3: Failure to find com.olleh.gigaeyes:gigaeyes-cvsaas-lib-commons:jar:1.1.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced -> [Help 1]
 ```
+
+#### 메이븐 강제 업데이트하기
 
 `-U` 를 추가해준다. 메이븐 강제 업데이트 옵션이다.
 >-U 명령어 = Force Update of Snapshots/Releases

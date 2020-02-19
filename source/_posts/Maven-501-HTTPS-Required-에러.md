@@ -100,37 +100,18 @@ JDK 버전에 따라 지원하는 TLS 버전이 달랐다
 ```bash
 $ mvn install -Dhttps.protocols=TLSv1.2
 ```
-또는 <url> 부분을 snapshot 으로 바꾼다.
-
-```xml
-<pluginRepository>
-   <releases>
-      <enabled>true</enabled>
-   <updatePolicy>always</updatePolicy>
-   </releases>
-   <id>central</id>
-   <name>Central Repository</name>
-      <url>https://snapshots.maven.codehaus.org/maven2</url>
-   <layout>default</layout>
-   <snapshots>
-      <enabled>true</enabled>
-   </snapshots>
-</pluginRepository>
-```
 
 ### cached in the local repository, resolution will not be reattempted
 
-그리고 또다른 오류 직면 .. 모르겠어..
+그리고 또다른 오류 직면 ..
 
 ```bash
 [ERROR] Failed to execute goal on project gigaeyes-cvsaas-ems: Could not resolve dependencies for project com.olleh.gigaeyes:gigaeyes-cvsaas-ems:war:1.3.3: Failure to find com.olleh.gigaeyes:gigaeyes-cvsaas-lib-commons:jar:1.1.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced -> [Help 1]
 ```
 
-`-U` 를 추가해준다.
+`-U` 를 추가해준다. 메이븐 강제 업데이트 옵션이다.
+>-U 명령어 = Force Update of Snapshots/Releases
 
 ```bash
 $ mvn -Dhttps.protocols=TLSv1.2 -U install
 ```
-
-해당 오류가 발생한 프로젝트에서는 nexux를 사용하는 모듈이 존재한다.
-snapshot?

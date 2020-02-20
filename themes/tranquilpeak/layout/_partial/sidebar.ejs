@@ -48,6 +48,7 @@
                             <li style="display: block; margin-bottom: 3px;">
                                 <a class="side-tag" href="<%- url_for(config.tag_dir + '/' + tag.slug) %>" data-tag="<%= tag.name.toLowerCase() %>">
                                     <%= tag.name + ' (' + tag.length + ')' %>
+                                    <!-- <%= category.name + ' (' + category.length + ')' %> -->
                                 </a>
                             </li>
                         <% }); %>

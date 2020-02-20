@@ -14,6 +14,8 @@ JPA 를 이해하는데 가장 중요한 용어.
 
 <!-- toc -->
 
+---
+
 ### Entity Manager (엔티티 매니저)
 
 >Entity Manager : Persistence Context = 1 : 1

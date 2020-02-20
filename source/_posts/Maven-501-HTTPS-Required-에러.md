@@ -13,6 +13,8 @@ date: 2020-02-18 14:58:11
 <!-- excerpt -->
 <!-- toc -->
 
+---
+
 ### Maven Repository 정책변경
 
 2020.01.15 이후 Maven Repository 정책이 아래와 같이 변경되었다.

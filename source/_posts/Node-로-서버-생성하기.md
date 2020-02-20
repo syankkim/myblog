@@ -1,17 +1,20 @@
 ---
 title: Node 로 서버 생성하기
-tags: []
+tags: [Node.js]
 categories: []
 thumbnail: ''
 permalink: ''
 date: 2020-02-20 14:42:47
 ---
 
+*작성중*
 Node.js 를 이용하여 서버를 생성해봅니다.
 ES6 문법을 사용할 수 있도록 설정합니다.
 <!-- excerpt -->
 
 <!-- toc -->
+
+---
 
 #### Node.js 에서 ES6 모듈 사용
 
@@ -34,3 +37,5 @@ $ npm install @babel/cli @babel/core
 ```bash
 $ npm install @babel/preset-env
 ```
+
+_... 작성중입니다._

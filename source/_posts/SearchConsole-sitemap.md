@@ -11,6 +11,8 @@ hexo 플러그인을 이용해 Google Search Console 에 github 블로그 소유
 <!-- excerpt -->
 <!-- toc -->
 
+---
+
 ### Google search console 등록
 
 [Google search console](https://search.google.com/search-console/welcome?hl=ko) 에 접속하여 일반적인 github.blog.io 를 사용하고 있다면 다음 창에 주소를 써 넣어준다.

@@ -2,13 +2,13 @@
 title: JPA - maven 연동
 date: 2020-02-14 01:19:04
 tags: [JPA]
+img: <img width="25" alt="inflearn2" src="https://user-images.githubusercontent.com/28856435/74893276-55244f00-53cf-11ea-8a6d-90ac0c4eb72a.png">
 categories: 
 thumbnail: ''
 permalink: ''
 ---
 
 JPA 처음 시작하기. 연동과정을 알아보고 H2 를 이용한 기본 CRUD 를 연습해봅니다.
-*인프런 강의를 보고 공부하며 작성한 포스트입니다.*
 ​<!-- excerpt -->
 
 <!-- toc -->

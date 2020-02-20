@@ -1,6 +1,7 @@
 ---
 title: JPA 엔티티 매핑
-tags: []
+tags: JPA
+img: <img width="25" alt="inflearn2" src="https://user-images.githubusercontent.com/28856435/74893276-55244f00-53cf-11ea-8a6d-90ac0c4eb72a.png">
 categories: []
 thumbnail: ''
 permalink: ''
@@ -8,7 +9,6 @@ date: 2020-02-16 17:12:54
 ---
 
 객체와 테이블, 필드와 컬럼, 기본키, 연관관계 매핑에 대해 알아봅니다.
-*인프런 강의를 보고 공부하며 작성한 포스트입니다.*
 <!-- excerpt -->
 
 <!-- toc -->

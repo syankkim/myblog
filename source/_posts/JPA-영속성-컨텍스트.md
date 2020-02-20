@@ -2,6 +2,7 @@
 title: JPA 영속성 컨텍스트
 date: 2020-02-15 12:19:04
 tags: JPA
+img: <img width="25" alt="inflearn2" src="https://user-images.githubusercontent.com/28856435/74893276-55244f00-53cf-11ea-8a6d-90ac0c4eb72a.png">
 categories: []
 thumbnail: ''
 permalink: ''
@@ -9,7 +10,6 @@ permalink: ''
 
 JPA 를 이해하는데 가장 중요한 용어.
 엔티티 매니저와 영속성 컨텍스트를 알아봅니다.
-*인프런 강의를 보고 공부하며 작성한 포스트입니다.*
 <!-- excerpt -->
 
 <!-- toc -->

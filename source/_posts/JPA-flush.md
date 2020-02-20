@@ -1,6 +1,7 @@
 ---
 title: JPA 플러시, 준영속 상태
 tags: JPA
+img: <img width="25" alt="inflearn2" src="https://user-images.githubusercontent.com/28856435/74893276-55244f00-53cf-11ea-8a6d-90ac0c4eb72a.png">
 categories: []
 thumbnail: ''
 permalink: ''
@@ -8,7 +9,6 @@ date: 2020-02-16 16:50:54
 ---
 
 플러시와 준영속 상태에 대해 알아봅니다.
-*인프런 강의를 보고 공부하며 작성한 포스트입니다.*
 <!-- excerpt -->
 <!-- toc -->
 

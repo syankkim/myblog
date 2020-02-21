@@ -7,6 +7,7 @@
     top:                         0;
     border:                      map-get($header, border);
     color:                       map-get($header, color);
+    opacity: 0.6;
     // used to animate the header on small screen with javascript
     //@include prefix(transition, top 0.25s ease-in-out, 'webkit' 'moz' 'ms' 'o');
     z-index:                     map-get($z-indexes, l-header);
@@ -58,13 +59,13 @@
         margin:      0;
 
         .header-title-link {
-            color:  #1c7ceb; // map-get($header, color);
+            color:  map-get($header, color);
             font-weight: normal;
             opacity: 1;
 
             &:hover,
             &:active {
-                color:   darken(color, 30);
+                color:   darken(#1c7ceb, 30);
                 text-decoration: none;
             }
         }

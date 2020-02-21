@@ -16,19 +16,23 @@ a.side-tag,
 .side-tag{
     display:        block;
     width:          auto;
-    height:         auto;
+    height:         30px;
     cursor:         pointer;
-    margin:         0;
-    margin-bottom:  7px;
+    line-height: 30px;
+    // margin:         0;
     color: #327cb8;
     text-decoration: none;
     text-decoration-style: none; 
     padding-left: 30px;
-    margin-bottom: 3px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(34, 82, 241, 0.116);
     width: auto; height: auto;
     font-size: small;
+    &:hover {
+        color:           map-get($colors, link);
+        text-decoration: underline;
+    }
 }
+
 
 // Colors variant
 a.tag--default,

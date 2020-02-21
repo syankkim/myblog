@@ -30,7 +30,8 @@
         }
         .sidebar-profile-name {
             font-size: 1.1em;
-            color:     map-get($sidebar, color);
+            color: black;
+            // color:     map-get($sidebar, color);
         }
     }
     // Sidebar's buttons

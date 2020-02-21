@@ -142,9 +142,10 @@ $about: (
 // Header
 $header:(
     'height':     55px,
-    'background': #fff,
-    'color':      #88909a,
-    'border':     1px solid #eef2f8
+    'background': #eceb4c ,
+    'color':      #1c7ceb,
+    'border-bottom': 0.7px solid #1f54c7
+    'opacity': 0.3
 );
 
 // Sidebar
@@ -153,7 +154,7 @@ $sidebar: (
     'lg-screen-width':  250px,
     'xlg-screen-width': 500px,
     'background':       rgba(17, 26, 35, 0),
-    'color':            #ebebeb
+    'color':            #1c7ceb
 );
 
 // Main
@@ -234,7 +235,7 @@ $markdown-headings-font-size: (
     'h3': 2.4rem,
     'h4': 2.1rem,
     'h5': 1.9rem,
-    'h6': 1.7rem
+    'h6': 1.5rem
 );
 // Reduction of markdwon headings on small screen and down
 $markdown-headings-font-size-sm-screen-reduction-factor: 0.35rem;

@@ -26,14 +26,15 @@
         cursor:   pointer;
     }
     .header-right-picture {
-        position: absolute;
+        position: relative;
+        margin: 10px auto;
         // vertical center
-        top:      12.5px;
-        right:    20px;
+        // top:      12.5px;
+        // right:    200px;
         display:  block;
         width:    30px;
         height:   30px;
-        color:    map-get($header, color);
+        color:    #1c7ceb; // map-get($header, color);
 
         .header-picture {
             display:       block;
@@ -42,26 +43,28 @@
             border-radius: 15px;
         }
     }
+    
     .header-right-icon {
         position: absolute;
         // vertical center
-        top:      12.5px;
-        right:    20px;
-        color:    map-get($header, color);
+        top:      10px;
+        // right:    200px;
+        color:  #1c7ceb; //map-get($header, color);
     }
     .header-title {
         text-align:  center;
         font-size:   $font-size-base;
-        line-height: 55px;
+        line-height: 60px;
         margin:      0;
 
         .header-title-link {
-            color:       map-get($header, color);
+            color:  #1c7ceb; // map-get($header, color);
             font-weight: normal;
+            opacity: 1;
 
             &:hover,
             &:active {
-                color:           darken(map-get($header, color), 10);
+                color:   darken(color, 30);
                 text-decoration: none;
             }
         }

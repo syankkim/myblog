@@ -1,8 +1,8 @@
 ---
 title: Git 블로그 생성 with hexo
 date: 2020-01-18 01:19:04
-tags: hexo
-categories: []
+tags: [hexo, git, blog]
+categories: [Hexo, Git]
 thumbnail: ""
 permalink: ""
 ---

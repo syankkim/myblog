@@ -15,30 +15,9 @@ function displayCategories(category) {
     // create category content
     var html = '';
     html += '<li>';
-    html += '<a class="side-tag" href="#posts-list-' + category.name + '" ' +
-        'class="category-anchor" ' +
-        'data-category="' + category.name.toLowerCase() + '" ' +
-        'data-parent-categories="' + category.parents.join(',') + '">';
-    if (category.parent) {
-        html += ' / ';
-    }
-    html += category.name;
-    html += ' ('
-    html+=(category.length);
-    html += ')'
+    html += '<a class="side-tag" href="' + url_for(category.path) + '">';
+    html += category.name + ' (' + category.length + ')';
     html += '</a>';
-    if (childCategories.length > 0) {
-        html += '<ul style="margin-bottom:0;">';
-        // recursive iteration on its child categories
-        childCategories.sort('name', 'asc').forEach(function(childCategory) {
-            // clone parents of current category to its child category
-            childCategory.parents = category.parents.slice();
-            // add current category to the parent of current child category
-            childCategory.parents.push(category.name.toLowerCase());
-            html += displayCategories(childCategory);
-        });
-        html += '</ul>';
-    }
     html += '</li>';
     return html;
 }

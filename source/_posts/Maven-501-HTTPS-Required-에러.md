@@ -1,7 +1,7 @@
 ---
 title: Maven 501 HTTPS Required , protocol_version Error
-tags: [maven]
-categories: []
+tags: [maven, maven-err]
+categories: [Maven]
 thumbnail: ''
 permalink: ''
 date: 2020-02-18 14:58:11

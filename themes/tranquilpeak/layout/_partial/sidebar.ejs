@@ -1,3 +1,46 @@
+<!-- function -->
+<%
+/**
+ * Display all categories of a category
+ * @param category
+ * @returns {string}
+ */
+function displayCategories(category) {
+    // get all its child categories
+    var childCategories = site.categories.find({'parent': category._id});
+    // init parents
+    if (category.parents === undefined) {
+        category.parents = [];
+    }
+    // create category content
+    var html = '';
+    html += '<div>';
+    html += '<a class="side-tag" href="#posts-list-' + category.name + '" ' +
+        'class="category-anchor" ' +
+        'data-category="' + category.name.toLowerCase() + '" ' +
+        'data-parent-categories="' + category.parents.join(',') + '">';
+    if (category.parent) {
+        html += ' / ';
+    }
+    html += category.name;
+    html += '</a>';
+    if (childCategories.length > 0) {
+        html += '<ul style="margin-bottom:0;">';
+        // recursive iteration on its child categories
+        childCategories.sort('name', 'asc').forEach(function(childCategory) {
+            // clone parents of current category to its child category
+            childCategory.parents = category.parents.slice();
+            // add current category to the parent of current child category
+            childCategory.parents.push(category.name.toLowerCase());
+            html += displayCategories(childCategory);
+        });
+        html += '</ul>';
+    }
+    html += '</div>';
+    return html;
+}
+%>
+
 <!-- Define author's picture -->
 <% var authorPicture = null; %>
 <% if (theme.gravatar_email && theme.gravatar_email.length) { %>
@@ -44,13 +87,10 @@
                         </a>
                     <!-- add -->
                     <% if (theme.sidebar[i][n].title === 'global.categories'){ %>
-                        <% site.tags.sort('name').each(function(tag) { %>
-                            <li style="display: block; margin-bottom: 3px;">
-                                <a class="side-tag" href="<%- url_for(config.tag_dir + '/' + tag.slug) %>" data-tag="<%= tag.name.toLowerCase() %>">
-                                    <%= tag.name + ' (' + tag.length + ')' %>
-                                    <!-- <%= category.name + ' (' + category.length + ')' %> -->
-                                </a>
-                            </li>
+                        <% site.categories.sort('name').each(function(category) { %>
+                            <% if (!category.parent) { %>
+                                <%- displayCategories(category) %>
+                            <% } %>
                         <% }); %>
                     <% } %>
                 </li>

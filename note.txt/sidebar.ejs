@@ -1,0 +1,8 @@
+<% site.categories.sort('name').each(function(category) { %>
+    <li style="display: block; margin-bottom: 3px;">
+        <a class="side-tag" href="<%- url_for(config.tag_dir + '/' + tag.slug) %>" data-tag="<%= tag.name.toLowerCase() %>">
+            <a class="link-unstyled" href="<%- url_for(config.archive_dir + '/' + currentYear) %>"><%= currentYear %></a>
+            <%= category.name + ' (' + category.length + ')' %>
+        </a>
+    </li>
+<% }); %>

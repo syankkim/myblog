@@ -7,6 +7,7 @@ permalink: ''
 date: 2020-02-29 10:56:21
 ---
 
+_작성중_
 Python 가상환경을 virtualenv 를 사용하여 설치해봅니다.
 python 을 visualcode와 연동하여 실행해봅니다.
 <!-- excerpt -->

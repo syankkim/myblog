@@ -11,7 +11,7 @@
 
 # Image directory (default: images)
 image_dir: assets/images
-
+home_dir: /index.html
 
 # ---------------------
 # Sidebar Configuration

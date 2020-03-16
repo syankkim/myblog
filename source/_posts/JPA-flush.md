@@ -1,8 +1,8 @@
 ---
 title: JPA 플러시, 준영속 상태
-tags: JPA
+tags: [JPA]
 img: <img width="25" alt="inflearn2" src="https://user-images.githubusercontent.com/28856435/74893276-55244f00-53cf-11ea-8a6d-90ac0c4eb72a.png">
-categories: []
+categories: [JPA]
 thumbnail: ''
 permalink: ''
 date: 2020-02-16 16:50:54

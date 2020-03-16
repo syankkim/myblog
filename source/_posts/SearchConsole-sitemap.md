@@ -1,7 +1,7 @@
 ---
 title: 구글 검색엔진 +사이트맵 생성
-tags: Git
-categories: []
+tags: [git, google, search-engine, sitemap]
+categories: [Git]
 thumbnail: ''
 permalink: ''
 date: 2020-02-17 22:54:49

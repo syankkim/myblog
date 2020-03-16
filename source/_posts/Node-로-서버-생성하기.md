@@ -1,6 +1,6 @@
 ---
 title: Node 로 서버 생성하기
-tags: [Node.js]
+tags: [Node.js, server]
 categories: [Node.js]
 thumbnail: ''
 permalink: ''

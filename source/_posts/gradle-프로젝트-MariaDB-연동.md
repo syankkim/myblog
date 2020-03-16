@@ -1,0 +1,96 @@
+---
+title: gradle 프로젝트 MariaDB 연동
+tags: ['gradle', 'mariadb','jpa']
+categories: ['JPA']
+thumbnail: ''
+permalink: ''
+date: 2020-03-16 16:26:02
+---
+
+gradle 프로젝트에서의 mariaDB 연동방법을 알아봅니다.
+그리고 JPA 를 간단하게 실습해보기 !
+<!-- excerpt -->
+<!-- toc -->
+
+
+
+### build.gradle 에 의존성 주입
+
+__build.gradle__
+```java
+plugins {
+    id 'org.springframework.boot' version '2.1.7.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.sue'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven { url "https://plugins.gradle.org/m2/" }
+}
+
+dependencies {
+    //mybatis
+    implementation 'org.springframework.boot:spring-boot-starter:2.1.0'
+    
+    // 스프링 부트를 사용하기 위함
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // 데이터를 연동하기 위함
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    
+	 //mariadb 사용
+    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+    
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
+
+```
+
+
+### application.yml 설정파일 생성
+
+```java
+server:
+  port: 8081
+  servlet:
+    context-path: /
+    
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/sosi?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: mysql1234
+    
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    properties:
+      hibernate.enable_lazy_load_no_trans: true  
+      hibernate.format_sql: true
+    open-in-view: false
+
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+```
+
+

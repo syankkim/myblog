@@ -61,6 +61,10 @@ sidebar:
             title: my github
             url: https://github.com/ksso730
             icon: fab fa-github
+        mail:
+            title: contact me
+            url: ksso7300@gmail.com
+            icon: fa fa-envelope
         # stack_overflow:
         #     title: global.stack_overflow
         #     url: http://stackoverflow.com/users
@@ -81,10 +85,6 @@ sidebar:
         #     title: global.linkedin
         #     url: https://www.linkedin.com/profile/
         #     icon: fab fa-linkedin
-        # mail:
-        #     title: global.mail
-        #     url: mailto
-        #     icon: fa fa-envelope
     # rss:
     #     rss:
     #         title: global.rss

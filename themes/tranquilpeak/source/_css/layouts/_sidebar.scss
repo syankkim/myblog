@@ -54,7 +54,7 @@
                 &:active {
                     text-decoration: none;
                     color:           lighten(map-get($sidebar, color), 35);
-                    border-color: darken($color: #4b1868a9, $amount: 0);
+                    border-color: darken($color: #ff1b1ba9, $amount: 0);
                 }
             }
         }

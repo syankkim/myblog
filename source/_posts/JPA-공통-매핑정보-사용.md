@@ -13,6 +13,8 @@ date: 2020-03-04 23:07:50
 <!-- excerpt -->
 <!-- toc -->
 
+---
+
 ### @MappedSuperclass
 `BaseEntity` 클래스.
 자주쓰이는 공통으로 사용되는 매핑정보들을 모아, 상속받아 사용.

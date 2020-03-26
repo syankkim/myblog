@@ -1,0 +1,66 @@
+---
+title: 스프링 시큐리티 OAuth 사용한 로그인 기능구현
+tags: ['spring','OAuth2']
+categories: ['Spring']
+thumbnail: ''
+permalink: ''
+date: 2020-03-26 22:17:40
+---
+
+SpringBoot, SpringSecurity, OAuth2 를 이용해 Google 로그인을 구현해 봅니다.
+<!-- excerpt -->
+<!-- toc -->
+
+---
+<br/>
+
+### Google Cloud Platform 에서 인증용 API 신청하기
+
+[구글클라우드 플랫폼](https://console.cloud.google.com/home/dashboard?project=fruite) 에 접속하여 프로젝트를 생성한다.
+
+
+__생성된 프로젝트에서 OAuth 동의화면을 구성한다.__
+![image](https://user-images.githubusercontent.com/28856435/77653327-e1b7c380-6fb2-11ea-98bd-5ac9eb7393db.png)
+<br/>
+
+__웹 어플리케이션 유형의 사용자 인증정보를 만든다.__
+![image](https://user-images.githubusercontent.com/28856435/77651410-17a77880-6fb0-11ea-9bf4-5ee0d1c1fed2.png)
+<br/>
+
+__아래와 같이 웹 어플리케이션의 클라이언트ID가 생성되었다.__
+![image](https://user-images.githubusercontent.com/28856435/77651295-ecbd2480-6faf-11ea-85b2-09bbb8da3f9d.png)
+<br/>
+
+
+### 로그인 구현을 위한 설정
+
+__build.gradle__
+```java
+ implementation 'org.springframework.cloud:spring-cloud-starter-security:2.1.2.RELEASE'
+ implementation 'org.springframework.cloud:spring-cloud-starter-oauth2:2.1.2.RELEASE'
+ ```
+
+ __application-oauth.properties__
+ /src/main/resources/static/application-oauth.properties 파일을 추가한다.
+
+```java
+spring.security.oauth2.client.registration.google.client-id={클라이언트 ID}
+spring.security.oauth2.client.registration.google.client-secret={secret 코드}
+spring.security.oauth2.client.registration.google.scope=profile,email
+```
+
+__.gitIgnore__
+해당 설정파일을 gitIgnore 에 넣어준다.
+```java
+application-oauth.properties
+```
+
+__application.yml__
+`include: oauth` 를 추가한다.
+
+```yml
+spring:
+  profiles: 
+    active: local
+    include: oauth
+```

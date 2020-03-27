@@ -7,9 +7,7 @@ permalink: ''
 date: 2020-03-16 16:26:02
 ---
 
-_작성중.._
 gradle 프로젝트에서의 mariaDB 연동방법을 알아봅니다.
-그리고 JPA 를 간단하게 실습해보기 !
 <!-- excerpt -->
 <!-- toc -->
 
@@ -137,23 +135,3 @@ spring:
       enabled: true
       force: true
 ```
-
-
-
-
-
-
-#### find... by...
-1. 메소드의 `이름` 만으로 원하는 쿼리를 실행할 수 있는데, `select` 문에서만 가능하다.
-2. 현재 실행하는 Repository 의 타입정보를 기준으로 동작함.
-
-다음과 같은 문법들이 존재한다.
-* find..By..
-* read..By..
-* query..By..
-* get..By..
-* count..By..
-
-
-### jpa CRUD JUnit Test
-

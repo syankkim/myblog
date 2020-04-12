@@ -64,6 +64,8 @@ def solution2(x, n):
 # solution2(2, 5)
 ```
 
+## 각 문자열의 인덱스 n번째 글자기준 정렬
+
 ```python
 #========================================================
 ## 코딩 테스트
@@ -110,6 +112,8 @@ stringList = ['abcw', 'abce', 'cdx']
 n = 2
 makeArr(stringList, n);
 ```
+
+## 그 외 파이썬 유용한 함수 (zip, rjust)
 
 ```python
 

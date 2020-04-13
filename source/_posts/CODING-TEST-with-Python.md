@@ -1,13 +1,14 @@
 ---
 title: CODING TEST with Python
 tags: []
-categories: []
+categories: ['coding test']
 thumbnail: ''
 permalink: ''
+status: ''
 date: 2020-04-12 23:51:24
 ---
 
-매일매일 코딩테스트 with 파이썬
+📜 매일매일 코딩테스트 with 파이썬
 <!-- excerpt -->
 <!-- toc -->
 
@@ -25,13 +26,10 @@ def substring(n):
     num = str(n)
     for i in range(0,len(num)):
         print("i = "+str(i))
-        print("length = "+str(len(num)))
-        #print(" n[0:1] :" + num[0:1])
 
         cut= num[i:i+1]
         print("num {0}=> cut {1}".format(num, cut))
-        print("--------------------------------")
-        # sum += cut
+        sum += cut
         print(sum)
     return sum
 
@@ -39,7 +37,7 @@ def solution(n):
     answer = substring(n)
     return answer
 
-# print("result : " + str(solution(123)))
+print("result : " + str(solution(123)))
 ```
 
 ## Return x부터 시작해 x씩 증가하는 숫자를 n개 지니는 리스트
@@ -61,7 +59,7 @@ def solution2(x, n):
     for i in range(1, n+1):
         answer.append(x*i)
         print("answer : {0}".format(answer))
-# solution2(2, 5)
+solution2(2, 5)
 ```
 
 ## 각 문자열의 인덱스 n번째 글자기준 정렬

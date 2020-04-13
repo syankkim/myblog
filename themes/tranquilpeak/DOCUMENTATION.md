@@ -104,6 +104,7 @@ The search modal of the theme works with Algolia API to search in your posts. To
     - excerpt
     - permalink
     - thumbnailImageUrl
+    - status
 ```
 
 ### Enable pages

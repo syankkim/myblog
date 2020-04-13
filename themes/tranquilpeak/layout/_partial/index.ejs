@@ -28,6 +28,8 @@
             postContent = postContent.replace(/<!--(\s*)[t|T][o|O][c|C](\s*)-->/, tableOfContents)
         }
     %>
+
+    <% if (!(post.status==="ing") ){%>
     <article class="postShorten postShorten--thumbnailimg-<%= thumbnailImagePosition %>">
         <div class="postShorten-wrap">
             <% if (thumbnailImageUrl !== null && thumbnailImagePosition === "top") { %>
@@ -127,6 +129,7 @@
             <% thumbnailImageUrl = null; %>
         <% } %>
     </article>
+    <% } %>
     <% }) %>
     <%- partial('pagination', {type: 'page'}) %>
 </section>

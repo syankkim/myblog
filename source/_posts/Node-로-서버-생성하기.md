@@ -1,7 +1,8 @@
 ---
 title: Node 로 서버 생성하기
 tags: [Node.js, server]
-categories: [Node.js]
+categories: ['작성중 글']
+status: 'ing'
 thumbnail: ''
 permalink: ''
 date: 2020-02-20 14:42:47

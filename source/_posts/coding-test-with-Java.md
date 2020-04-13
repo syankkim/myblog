@@ -13,9 +13,11 @@ date: 2020-04-14 00:05:31
 <!-- excerpt -->
 <!-- toc -->
 
+---
+
 ## 최대공약수와 최소공배수
 
-```Java
+```java
 // =====================================================================================================
 // 문제 설명
 // 두 수를 입력받아 두 수의 최대공약수와 최소공배수를 반환하는 함수,
@@ -69,7 +71,8 @@ public int[] solution(int n, int m) {
 public static void main(String args[]) throws Exception{
     int[] answer = new Solution().solution(3, 12);
 }
-```   
+```
+
 
 ## 행렬의 덧셈
 

@@ -1,6 +1,6 @@
 ---
 title: CODING TEST with Python
-tags: []
+tags: ['python']
 categories: ['coding test']
 thumbnail: ''
 permalink: ''
@@ -9,6 +9,9 @@ date: 2020-04-12 23:51:24
 ---
 
 📜 매일매일 코딩테스트 with 파이썬
+1) 정수N 자릿수의 합
+2) X부터 X만큼 증가, N개를 저장하는 리스트
+3) 배열내 갹 문자열의 인덱스 n번째 글자기준 정렬
 <!-- excerpt -->
 <!-- toc -->
 
@@ -109,54 +112,6 @@ def makeArr(strings, n):
 stringList = ['abcw', 'abce', 'cdx']
 n = 2
 makeArr(stringList, n);
-```
-
-## 그 외 파이썬 유용한 함수 (zip, rjust)
-
-```python
-
-# 그 외 파이썬 공부
-#========================================================
-### zip 내장 함수, 이진연산
-#========================================================
-
-def ziplist(n):
-    arr1 =[3,4,5]
-    arr2 = [1,2,3]
-    n = 5
-
-    for num1, num2 in zip(arr1, arr2):
-        print(num1, num2)
-        tmp = bin(num1|num2)[2:]
-        print(tmp)
-
-        tmp = tmp.rjust(5, '#')
-
-
-#========================================================
-### rJust 함수
-#========================================================
-
-def rjst(n):
-    list= ['1','2','3']
-    tostring = "".join(list)
-    if n > len(tostring):
-        tostring = tostring.rjust(n, '#')
-    print("tostring : " + tostring)
-    # tostring : #######123
-
-# rjst(10)
-
-
-# ============================================================
-### 숫자를 자리수로 잘라 하나씩 리스트에 담기
-# ============================================================
-def numToList(number):
-    n = 234
-    list = [ int(i) for i in str(n)]
-    print(list)
-    return list
-    # [2, 3, 4]
 ```
 
 

@@ -1,5 +1,5 @@
 ---
-title: CODING TEST {"최대공배수/최소공약수","행렬의 덧셈"} with Java
+title: CODING TEST with Java
 tags: []
 categories: ['coding test']
 thumbnail: ''

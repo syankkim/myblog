@@ -1,7 +1,7 @@
 ---
 title: CODING TEST {"싱글숫자 구하기"} with Java
 tags: ['java','codingtest']
-categories: ['coding test']
+categories: [☁️ coding test]
 thumbnail: ''
 permalink: ''
 date: 2020-04-22 16:03:14

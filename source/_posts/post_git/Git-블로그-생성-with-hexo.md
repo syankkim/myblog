@@ -2,13 +2,13 @@
 title: Git 블로그 생성 with hexo
 date: 2020-01-18 01:19:04
 tags: [hexo, git, blog]
-categories: [Hexo, Git]
+categories: [☁️ Git]
 thumbnail: ""
 permalink: ""
 ---
 
-Hexo 를 이용해 Git Blog 를 생성합니다.
-연동 전 기본 setting 부터 git repo 연동과 배포까지.
+✔️ Hexo 를 이용해 Git Blog 를 생성합니다.
+   연동 전 기본 setting 부터 git repo 연동과 배포까지.
 <!-- excerpt -->
 
 작년에 `jekill` 로 git 블로그 생성을 시도하다 실패였고,

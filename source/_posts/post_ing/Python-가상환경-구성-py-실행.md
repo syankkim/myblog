@@ -1,7 +1,7 @@
 ---
 title: 'Python 인터프리터 설치, 가상환경 구성, vsCode 연동'
 tags: [python, virtualenv]
-categories: ['작성중 글']
+categories: []
 thumbnail: ''
 permalink: ''
 status: 'ing'

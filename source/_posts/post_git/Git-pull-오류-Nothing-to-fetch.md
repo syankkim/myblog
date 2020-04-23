@@ -1,12 +1,13 @@
 ---
 title: 'Git pull 오류: Nothing to fetch'
 tags: ['git']
-categories: ['Git']
+categories: [☁️ Git]
 thumbnail: ''
 permalink: ''
 date: 2020-03-17 12:09:22
 ---
 
+💬 _작성중_
 이클립스에서 Git pull 오류: Nothing to fetch 해결 방법입니다.
 <!-- excerpt -->
 <!-- toc -->

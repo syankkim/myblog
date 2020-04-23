@@ -3,7 +3,7 @@ title: JPA 영속성 컨텍스트
 date: 2020-02-15 12:19:04
 tags: [JPA]
 img: <img width="25" alt="inflearn2" src="https://user-images.githubusercontent.com/28856435/74893276-55244f00-53cf-11ea-8a6d-90ac0c4eb72a.png">
-categories: [JPA]
+categories: [☁️ JPA]
 thumbnail: ''
 permalink: ''
 ---

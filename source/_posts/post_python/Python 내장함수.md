@@ -1,7 +1,7 @@
 ---
 title: Python 내장함수
 tags: ["python",'python 이진연산','rJust']
-categories: ['Python']
+categories: [☁️ Python]
 thumbnail: ''
 permalink: ''
 date: 2020-04-22 16:10:28

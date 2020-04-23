@@ -1,7 +1,7 @@
 ---
 title: JPA 공통 매핑정보 사용
 tags: [jpa]
-categories: [JPA]
+categories: [☁️ JPA]
 img: <img width="25" alt="inflearn2" src="https://user-images.githubusercontent.com/28856435/74893276-55244f00-53cf-11ea-8a6d-90ac0c4eb72a.png">
 thumbnail: ''
 permalink: ''

@@ -1,7 +1,7 @@
 ---
 title: gradle 프로젝트 MariaDB 연동
 tags: ['gradle', 'mariadb','jpa']
-categories: ['Projects', 'JPA']
+categories: [☁️ Config]
 thumbnail: ''
 permalink: ''
 date: 2020-03-16 16:26:02

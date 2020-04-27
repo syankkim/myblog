@@ -1,5 +1,5 @@
 ---
-title: 개발일지☞ DB Connection Pool Error (DBCP)
+title: 개발일지🌟 DB Connection Pool Error (DBCP)
 tags: ['DBCP','DataBase']
 categories: [☁️ DataBase]
 thumbnail: ''

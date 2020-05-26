@@ -150,16 +150,21 @@ code {
     color: darkcyan;
 }
 
+
+
 acronym,
 abbr {
     border-bottom: 1px dotted $font-color-base;
 }
 
 blockquote {
-    border-left: 3px solid map-get($colors, 'base');
-    padding:     0 15px;
-    font-style:  italic;
-    margin:      1.5em 0 0;
+    color: #00477a;
+    border-left: 7px solid #0086b3;
+    padding: 0 15px;
+    font-style: initial;
+    margin: 1.5em 0 0;
+    background-color: ivory;
+    padding: 2%;
 
     cite {
         &:before {

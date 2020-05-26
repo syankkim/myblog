@@ -19,8 +19,7 @@ DB Connection Pool Error 의 원인을 찾아보며
 ## ISSUE[1] DB Connection Pool ERROR
 
 ### 현상
->
-__DB Connection pool error timeout waiting for idle object__
+>__DB Connection pool error timeout waiting for idle object__
 ```
  DatabaseException - nested exception is org.apache.ibatis.exceptions.PersistenceException:
 ### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: 
@@ -30,12 +29,11 @@ connection, pool error Timeout waiting for idle object
 
 ### 당시 DataBase config
 `#max-active` `#min-idle` `#max-idle`
->
-* 풀의 초기 커넥션 갯수 : 10
-* Idle상태에 풀이 소유한 최소 커넥션 갯수 : 10
-* Idle상태에 풀이 소유한 최대 커넥션 갯수 : 30
-* 최대 커넥션 갯수 : 50
-* 커넥션이 존재하지 않을 때, 커넥션을 얻기까지 대기하는 최대 대기시간 : 5000
+>* 풀의 초기 커넥션 갯수 : 10
+>* Idle상태에 풀이 소유한 최소 커넥션 갯수 : 10
+>* Idle상태에 풀이 소유한 최대 커넥션 갯수 : 30
+>* 최대 커넥션 갯수 : 50
+>* 커넥션이 존재하지 않을 때, 커넥션을 얻기까지 대기하는 최대 대기시간 : 5000
 
 ### 원인 : @Transaction
 특정 API 에서 `@Trnasaction` 이 걸려있었던 상태.
@@ -67,10 +65,9 @@ connection, pool error Timeout waiting for idle object
 위와 같은 모든 요청에의해 DB접속을 위한 Driver를 로드하고 Connection 객체를 생성하여 연결한다면 물리적으로 DB 서버에 지속적으로 접근해야 한다.
 
 ## DBCP (HikariCP)
->
-이러한 문제를 해결하기 위해 나온 것이 **DBCP** 이다. DB Connection 객체를 생성하고 연결하는데 드는 비용과 시간을 줄이고 네트워크 연결에 대한 부담을 줄여준다.
+>이러한 문제를 해결하기 위해 나온 것이 **DBCP** 이다. DB Connection 객체를 생성하고 연결하는데 드는 비용과 시간을 줄이고 네트워크 연결에 대한 부담을 줄여준다.
 SpringBoot 2.x 출범 이후 HikariCP 를 기본JDBC Connection Pool 로 사용 가능하게 되었다고 한다. 다른 Connection Pool 에 비해 성능이 압도적이라고 한다.
-_[HikariCP Dead lock에서 벗어나기 - 우아한형제들 기술블로그] (https://woowabros.github.io/experience/2020/02/06/hikaricp-avoid-dead-lock.html) 를 바탕으로 작성되었습니다._
+_[HikariCP Dead lock에서 벗어나기 - 우아한형제들 기술블로그](https://woowabros.github.io/experience/2020/02/06/hikaricp-avoid-dead-lock.html) 를 바탕으로 작성되었습니다._
 
 ### getConnection
 **1. hikariPool._getConnection()_**

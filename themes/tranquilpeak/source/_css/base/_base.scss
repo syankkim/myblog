@@ -145,8 +145,9 @@ code {
     display:          inline-block;
     font-family:      map-get($font-families, 'code');
     font-weight:      400;
-    background-color: map-get($highlight, 'background');
+    background-color: #ebeef2;
     padding:          0 10px;
+    color: darkcyan;
 }
 
 acronym,

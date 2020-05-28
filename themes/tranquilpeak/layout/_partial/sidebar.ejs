@@ -14,7 +14,7 @@ function displayCategories(category) {
     }
     // create category content
     var html = '';
-    html += '<li>';
+    html += '<li class="side-tag-li">';
     html += '<a class="side-tag" href="' + url_for(category.path) + '">';
     html += category.name + ' (' + category.length + ')';
     html += '</a>';
@@ -46,7 +46,7 @@ function displayCategories(category) {
                 </a>
                 <h4 class="sidebar-profile-name"><%= config.author %></h4>
                 <% if (__('author.bio')) { %>
-                    <h5 class="sidebar-profile-bio"><%- markdown(__('author.bio')) %></h5>
+                    <h5 class="sidebar-profile-bio"><%- markdown(__('▲ Who Am I')) %></h5>
                 <% } %>
             </div>
         <% } %>

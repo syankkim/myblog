@@ -74,7 +74,7 @@
         // Display `main` div in small size
         &[data-behavior="1"],
         &[data-behavior="2"] {
-            @include main-sm;
+            @include main-md;
         }
         // Display `main` div in medium size
         &[data-behavior="3"] {
@@ -98,7 +98,7 @@
     #main {
         // Display `main` div in extra small size
         &[data-behavior="1"] {
-            @include main-xs;
+            @include main-md;
         }
         // Display `main` div in small size
         &[data-behavior="2"] {

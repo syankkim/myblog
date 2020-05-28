@@ -12,13 +12,21 @@ a.tag,
     margin-bottom:  7px;
 }
 
+li.side-tag-li{
+    list-style: none;
+}
+
+li.side-tag-li:last-child{
+   margin-bottom: 20px;
+}
+
 a.side-tag,
 .side-tag{
     display:        block;
     width:          auto;
-    height:         30px;
+    height:         40px;
     cursor:         pointer;
-    line-height: 30px;
+    line-height: 40px;
     // margin:         0;
     color: #327cb8;
     text-decoration: none;
@@ -26,7 +34,7 @@ a.side-tag,
     padding-left: 30px;
     border-top: 1px solid rgba(34, 82, 241, 0.116);
     width: auto; height: auto;
-    font-size: small;
+    font-size: inherit;
     &:hover {
         color:           map-get($colors, link);
         text-decoration: underline;

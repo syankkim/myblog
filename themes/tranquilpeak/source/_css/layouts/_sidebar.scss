@@ -27,7 +27,10 @@
         .sidebar-profile-picture {
             display: block;
             margin:  0 auto;
+            width: 40%;
+            height: 40%;
         }
+
         .sidebar-profile-name {
             font-size: 1.1em;
             color: black;
@@ -54,7 +57,7 @@
                 &:hover,
                 &:active {
                     text-decoration: none;
-                    color:           lighten(map-get($sidebar, color), 35);
+                    color:           darken(map-get($sidebar, color), 35);
                     border-color: darken($color: #ff1b1ba9, $amount: 0);
                 }
             }

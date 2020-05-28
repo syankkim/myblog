@@ -5,11 +5,11 @@
 # Site
 title: "동글씨"
 subtitle: "동글씨의 LOG"
-description: "안녕하세요, 동글씨의 개발 블로그 입니다."
+description: "안녕하세요, 서버 백엔드 개발자 동글씨입니다."
 keywords: 
 author: "Suyan Kim"
 author_job: "Backend Developer"
-author_bio: "안녕하세요, 동글씨의 개발 블로그 입니다."
+author_bio: "안녕하세요, 서버 백엔드 개발자 동글씨입니다."
 language: "en"
 timezone: "Asia/Seoul"
 

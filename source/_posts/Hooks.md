@@ -50,6 +50,7 @@ useEffect(() => {
 ```
 
 * 그런데 `[]` 는 뭔가요? deps 란?
+
 >mount 할때마다 실행. => componentDidMount, componentDidUpdate
 시작하자마자 한번만 읽어로려면, 즉 didMount 에만 함수를 적용하고 싶다면,
 함수의 2번째 인자로 `[] deps` 를 줘야함.

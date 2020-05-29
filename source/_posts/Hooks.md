@@ -1,5 +1,5 @@
 ---
-title: Hooks 로 함수형 코딩을 해보자
+title: Hooks 로 함수형 코딩을 해보자 
 tags: ['Hooks','react']
 categories: [☁️ React]
 img: <img width="100" alt="react-logo" src="https://user-images.githubusercontent.com/28856435/83209013-2c5fe280-a192-11ea-947e-18055da3d97e.png">
@@ -121,8 +121,8 @@ function App3() {
 
 * `onUserInput` 이벤트를 연결한다. 이벤트가 발생한 곳의 값(input 태그의 값)을 가져와 `onUserInput`에 값을 넣어준다.
 __SearchBar(str)__
-```javascript
 
+```javascript
 function SearchBar(props) {
     // useCallBack
     const onChange=(e)=>{

@@ -78,7 +78,7 @@ C:\Users\sist27>npm install -g create-react-app
 
 >class 기반 : 생명주기가 있음
 
-```react
+```javascript
     class App extends Component
     {
         constructor(){}
@@ -97,7 +97,7 @@ C:\Users\sist27>npm install -g create-react-app
 
 >function : 생명주기가 없음 -> Data를 넘겨주는 방식 -> 그런데 어려움 -> Hooks 사용
 
-```react
+```javascript
     function App()
     {
         return{

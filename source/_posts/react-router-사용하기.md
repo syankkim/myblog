@@ -15,14 +15,14 @@ SPA 의 단점을 보완하고, 표준적으로 쓰이고 있는 `React Router` 
 
 
 ## React Router
-> `React Router` 란, _SPA(Single Page Application: 모든코드를 하나의 파일에서 관리)_ 의 라우팅 문제를 보완할 수 있도록 코드의 모듈화를 가능하게 해주는 라이브러리 입니다.
-서로 다른 주소를 가진 view 를 만들어 관리합니다. 즉, component 마다 다른 url 을 호출하여 화면을 부르 있도록 합니다. 
-function 방식인 `Hooks` 를 적용했습니다.
+> `React Router` 란, _SPA(Single Page Application: 모든코드를 하나의 파일에서 관리)_ 의 라우팅 문제를 보완할 수 있도록 코드의 모듈화를 가능하게 해주는 라이브러리 이다.
+서로 다른 주소를 가진 view 를 만들어 관리한다. 즉, component 마다 다른 url 을 호출하여 화면을 그려줄 수 있다.
+function 방식인 `Hooks` 를 적용.
 
 ---
 
 
-예제에 대한 클래스 트리입니다. 
+예제에 대한 클래스 트리이다. 
 &nbsp;&nbsp;&nbsp;public
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ㄴindex.html
 &nbsp;&nbsp;&nbsp;src

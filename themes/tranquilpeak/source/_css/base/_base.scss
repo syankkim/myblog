@@ -141,13 +141,16 @@ pre > code {
 
 // inline code
 code {
-    font-size:        map-get($font-size, medium);
+    // font-size:        map-get($font-size, medium);
+    font-size: 1.3rem;
     display:          inline-block;
     font-family:      map-get($font-families, 'code');
     font-weight:      400;
-    background-color: #ebeef2;
-    padding:          0 10px;
+    line-height: 2rem;
+    padding:          0 6px;
     color: darkcyan;
+    border: 2px solid darkcyan;
+    border-radius: 5px; 
 }
 
 

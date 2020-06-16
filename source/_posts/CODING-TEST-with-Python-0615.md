@@ -1,10 +1,10 @@
 ---
-title: CODING TEST with Python
+title: CODING TEST  {SockMerchant} with Python
 tags: ['python','codingtest']
 categories: [☁️ coding test]
 thumbnail: ''
 permalink: ''
-date: 2020-04-22 16:03:14
+date: 2020-06-15 10:03:11
 ---
 
 📜 코딩테스트 with Python
@@ -21,6 +21,8 @@ Q. SockMerchant
 > Q. Complete the sockMerchant function below.
 For example, there are  socks with colors . There is one pair of color  and one of color .
 There are three odd socks left, one of each color. The number of pairs is.
+
+## [문제 답변]
 
 ```python
 import sockMerchant
@@ -47,9 +49,9 @@ def sockMerchant(n, ar):
     return cnt
 
 
+#  __name__에는 '__main__' 이 들어감. 시작점(entry point) 이다.
 if __name__ == '__main__':
     n = int(input('리스트 길이 입력: '))
     ar = list(map(int, input('리스트 원소 입력: ').rstrip().split()))
     print(sockMerchant(n, ar))
-```    
-#  __name__에는 '__main__' 이 들어감. 시작점(entry point) 이다.
+```

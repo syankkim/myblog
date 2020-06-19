@@ -3,17 +3,21 @@
 .postShorten-group {
     .postShorten {
         // Space between 2 shorten post
-        margin-top:    15px;
-        border-bottom: 1px solid #eef2f8;
+        margin-top:    30px;
+        // border-bottom: 1px solid #eef2f8;
     }
 }
 
 // Post
 .postShorten {
     position:       relative;
-    width:          100%;
+    width:          95%;
     display:        inline-block;
-    vertical-align: top;
+    vertical-align: middle;
+    padding: 30px;
+    border-radius: 10px;
+    border: 3px double #008b8b;
+    margin-top: 50px;
 
     .postShorten-thumbnailimg {
         overflow:hidden;
@@ -70,6 +74,10 @@
     }
     .postShorten-excerpt {
         margin-top: 15px;
+    }
+
+    .postShorten-excerpt img {
+        width: 400px;
     }
     .postShorten-content {
         margin-top: 25px;

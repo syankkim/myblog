@@ -36,7 +36,9 @@
         &[data-behavior="1"],
         &[data-behavior="2"],
         &[data-behavior="5"] {
-            @include main-pushed-lg;
+            // @include main-pushed-lg;
+            @include main-pushed-md;
+            margin-left: -2%;
         }
         // Push `main` div from the size of the medium sidebar
         &[data-behavior="3"],
@@ -53,7 +55,8 @@
         &[data-behavior="1"],
         &[data-behavior="2"],
         &[data-behavior="3"] {
-            @include main-xs;
+            @include main-sm;
+            // @include main-xs;
         }
         // Display `main` div in large size and push it from the size of the large sidebar
         &[data-behavior="4"],

@@ -7,6 +7,7 @@
     background:         map-get($sidebar, background);
     overflow:           auto;
     z-index:            map-get($z-indexes, l-sidebar);
+    font-weight: 900;
     // Sidebar animation
     // Transition style (push)
     transition:         transform .25s ease-in-out;
@@ -94,7 +95,8 @@
         &[data-behavior="1"],
         &[data-behavior="2"],
         &[data-behavior="3"] {
-            @include sidebar-md;
+            // @include sidebar-md;
+            @include sidebar-lg;
         }
         &[data-behavior="4"],
         &[data-behavior="5"] {

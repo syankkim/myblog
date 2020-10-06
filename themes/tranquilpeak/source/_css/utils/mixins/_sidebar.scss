@@ -181,12 +181,15 @@
                     width:          auto;
                     height:         35px;
                     line-height:    35px;
-                    font-size:      2.2rem;
+                    font-size:      2.0rem;
                     letter-spacing: 0.3px;
                     vertical-align: middle;
                     overflow:       hidden;
                     white-space:    nowrap;
                     text-overflow:  ellipsis;
+                }
+                a.side-tag, .side-tag {
+                    font-size:      1.8rem;
                 }
             }
             &:nth-child(odd) {

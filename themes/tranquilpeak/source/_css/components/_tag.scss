@@ -34,7 +34,8 @@ a.side-tag,
     padding-left: 30px;
     border-top: 1px solid rgba(34, 82, 241, 0.116);
     width: auto; height: auto;
-    font-size: inherit;
+    font-size: 1.3rem;
+    font-weight: 700;
     &:hover {
         color:           map-get($colors, link);
         text-decoration: underline;

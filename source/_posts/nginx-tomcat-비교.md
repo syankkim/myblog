@@ -2,12 +2,13 @@
 title: 'Nginx & Tomcat 비교'
 tags: ['apache', 'nginx', 'C10K', 'MPM', 'PreFork', 'Worker']
 categories: [☁️ Web]
+img: <img width="300" src="https://user-images.githubusercontent.com/28856435/83641005-e074c980-a5e7-11ea-92d3-c89fd6ba9662.png">
 permalink: ''
 date: 2020-06-03 22:12:06
 ---
 
-![0_UneV-I-bBldmqkgK](https://user-images.githubusercontent.com/28856435/83641005-e074c980-a5e7-11ea-92d3-c89fd6ba9662.png)
-Nginx & Apache 를 비교하며 각 장단점을 알아봅니다.
+<!-- ![0_UneV-I-bBldmqkgK](https://user-images.githubusercontent.com/28856435/83641005-e074c980-a5e7-11ea-92d3-c89fd6ba9662.png)
+Nginx & Apache 를 비교하며 각 장단점을 알아봅니다. -->
 `apache` `nginx` `C10K` `MPM` `PreFork` `Worker`
 <!-- excerpt -->
 <!-- toc -->

@@ -16,7 +16,8 @@
     vertical-align: middle;
     padding: 30px;
     border-radius: 10px;
-    border: 3px double #008b8b;
+    // border: 3px double #008b8b;
+    border : 0.7rem outset #31aaaa;
     margin-top: 50px;
 
     .postShorten-thumbnailimg {
@@ -54,7 +55,7 @@
     .postShorten-excerpt_link {
         font-family: map-get($font-families, 'post-excerpt-link');
         font-size:   map-get($font-size, small);
-        font-weight: 400;
+        font-weight: 600;
     }
     .postShorten-excerpt,
     .postShorten-content {

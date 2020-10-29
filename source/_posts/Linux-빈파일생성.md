@@ -108,7 +108,7 @@ cp: cannot stat `dev/null': No such file or directory
 <br/>
 <div style="border: 1px solid #CACACA; border-radius: 0.5em; padding: 0.1em">
 ```
-gigasurv@DEV_LOGW:~:> strace -e open cp dev/null access_test.log  
+> strace -e open cp dev/null access_test.log  
 open("/etc/ld.so.cache", O_RDONLY)      = 3
 open("/lib64/libselinux.so.1", O_RDONLY) = 3
 open("/lib64/librt.so.1", O_RDONLY)     = 3

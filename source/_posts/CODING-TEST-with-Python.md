@@ -1,7 +1,7 @@
 ---
 title: CODING TEST with Python
 tags: ['python']
-categories: [☁️ coding test]
+categories: [☁️ Algorithm]
 thumbnail: ''
 permalink: ''
 status: ''

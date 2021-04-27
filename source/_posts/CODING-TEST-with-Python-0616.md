@@ -1,7 +1,7 @@
 ---
 title: CODING TEST {동전} with Python
 tags: ['python','codingtest']
-categories: [☁️ coding test]
+categories: [☁️ Algorithm]
 thumbnail: ''
 permalink: ''
 date: 2020-06-16 11:03:14

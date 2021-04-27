@@ -58,13 +58,13 @@ sidebar:
             icon: fa fa-question
     author_links:
         github:
-            title: my github
+            title: Github
             url: https://github.com/ksso730
             icon: fab fa-github
         mail:
-            title: contact me
-            url: ksso7300@gmail.com
-            icon: fa fa-envelope
+            title: LifeStyle
+            url: https://www.instagram.com/syankkim/
+            icon: fab fa-instagram
         # stack_overflow:
         #     title: global.stack_overflow
         #     url: http://stackoverflow.com/users

@@ -1,7 +1,7 @@
 ---
 title: CODING TEST  {SockMerchant} with Python
 tags: ['python','codingtest']
-categories: [☁️ coding test]
+categories: [☁️ Algorithm]
 thumbnail: ''
 permalink: ''
 date: 2020-06-15 10:03:11

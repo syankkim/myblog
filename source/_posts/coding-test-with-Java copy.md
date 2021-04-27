@@ -1,7 +1,7 @@
 ---
 title: CODING TEST with Java
 tags: []
-categories: [☁️ coding test]
+categories: [☁️ Algorithm]
 thumbnail: ''
 permalink: ''
 date: 2020-04-14 00:05:31

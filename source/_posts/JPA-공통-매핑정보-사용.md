@@ -10,6 +10,7 @@ date: 2020-03-04 23:07:50
 
 @MappedSuperclass 공통 속성을 모아두는 클래스.
 공통 객체에서 상속받아 공통 속성들을 사용한다.
+`JPA` `BaseEntity`
 <!-- excerpt -->
 <!-- toc -->
 

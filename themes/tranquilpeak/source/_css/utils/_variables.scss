@@ -6,7 +6,8 @@ $open-sans:            'Open Sans';
 $open-sans-sans-serif: 'Open Sans', sans-serif;
 $merriweather-serif:   'Merriweather', serif;
 $monospace:             Menlo, Consolas, monospace;
-$nanum-sans-kr:          'NanumSquareRound', "Helvetica Neue", sans-serif; // 기본 폰트 
+$nanum-sans-kr:         Avenir, 'Noto Sans KR', SpoqaHanSans, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', Helvetica, sans-serif;
+// 'NanumSquareRound', "Helvetica Neue", sans-serif; // 기본 폰트 
 $nanum-coding:   'Source Code Pro', "NanumSquareRound", Consolas; // 코드 폰트
 
 // $font-family-base: $open-sans-sans-serif;
@@ -58,7 +59,7 @@ $colors: (
     'warning':  #f5aa0a,
     'light':   #9eabb3,
      // use for tag `a`
-    'link':    #06cba6
+    'link':    #ff61aa
 );
 
 // Z-indexes
@@ -153,7 +154,7 @@ $sidebar: (
     'lg-screen-width':  250px,
     'xlg-screen-width': 500px,
     'background':       rgba(255, 255, 255, 0.9),
-    'color':            #0c6c6c
+    'color':            #4f6674
 );
 
 // Main

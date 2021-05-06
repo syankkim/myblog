@@ -7,7 +7,7 @@
     background:         map-get($sidebar, background);
     overflow:           auto;
     z-index:            map-get($z-indexes, l-sidebar);
-    font-weight: 900;
+    font-weight: 700;
     // Sidebar animation
     // Transition style (push)
     transition:         transform .25s ease-in-out;
@@ -23,13 +23,13 @@
         color:         map-get($sidebar, color);
         text-align:    center;
         padding-top:   18px;
-        margin-bottom: 30%;
+        margin-bottom: 3%;
 
         .sidebar-profile-picture {
             display: block;
             margin:  0 auto;
-            width: 50%;
-            height: 50%;
+            width: 60%;
+            height: 60%;
         }
 
         .sidebar-profile-name {
@@ -41,7 +41,7 @@
     // Sidebar's buttons
     ul.sidebar-buttons {
         padding: 0;
-        margin:  0 0 20px 0;
+        margin:  40px 0 20px 0;
 
         li.sidebar-button {
             display:     block;

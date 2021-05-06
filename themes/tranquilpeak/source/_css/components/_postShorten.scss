@@ -11,13 +11,12 @@
 // Post
 .postShorten {
     position:       relative;
-    width:          90%;
+    width:          100%;
     display:        inline-block;
     vertical-align: middle;
     padding: 30px;
-    border-radius: 10px;
     // border: 3px double #008b8b;
-    border : 0.7rem outset rgb(49, 170, 170);
+    border-bottom: 0.2rem double #b79d80;
     margin-top: 50px;
 
     .postShorten-thumbnailimg {

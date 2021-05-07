@@ -40,6 +40,10 @@ sidebar:
             title: global.home
             url: /index.html
             icon: fa fa-home
+        archives:
+            title: global.archives
+            url: /all-archives
+            icon: fa fa-archive
         categories:
             title: global.categories
             url: /all-categories
@@ -48,21 +52,17 @@ sidebar:
             title: global.tags
             url: /all-tags
             icon: fa fa-tags
-        archives:
-            title: global.archives
-            url: /all-archives
-            icon: fa fa-archive
         about me:
             title: global.about
             url: /#about
             icon: fa fa-question
     author_links:
         github:
-            title: Github
+            title: github
             url: https://github.com/ksso730
             icon: fab fa-github
         mail:
-            title: LifeStyle
+            title: life
             url: https://www.instagram.com/syankkim/
             icon: fab fa-instagram
         # stack_overflow:

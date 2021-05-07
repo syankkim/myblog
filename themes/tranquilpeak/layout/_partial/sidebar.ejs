@@ -6,17 +6,27 @@
  * @returns {string}
  */
 function displayCategories(category) {
+    
+    var postCnt = category.length;
     // get all its child categories
     var childCategories = site.categories.find({'parent': category._id});
     // init parents
     if (category.parents === undefined) {
         category.parents = [];
     }
+
+    var posts = category.posts;
+    posts.sort('date', 'desc').forEach(function(post) {
+        if (post.status === 'ing'){
+            postCnt --;
+        }
+    });
+
     // create category content
     var html = '';
     html += '<li class="side-tag-li">';
     html += '<a class="side-tag" href="' + url_for(category.path) + '">';
-    html += category.name + ' (' + category.length + ')';
+    html += category.name + ' (' + postCnt + ')';
     html += '</a>';
     html += '</li>';
     return html;

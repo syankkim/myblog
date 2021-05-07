@@ -106,6 +106,7 @@ The search modal of the theme works with Algolia API to search in your posts. To
     - thumbnailImageUrl
     - status
 ```
+if status: 'ing' => will not show on your post list
 
 ### Enable pages
 

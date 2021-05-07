@@ -15,6 +15,13 @@ function displayCategoriesAndPosts(category) {
         category.parents = [];
         boxCSSClass = 'box';
     }
+    var postCnt = category.length;
+    posts.sort('date', 'desc').forEach(function(post) {
+        if (post.status === 'ing'){
+            postCnt --;
+        }
+    });
+
     // create post content
     var html = '';
     html += '<div id="posts-list-' + category.name + '" class="archive ' + boxCSSClass + '" ' +
@@ -23,7 +30,7 @@ function displayCategoriesAndPosts(category) {
     // add category title
     html += '<h4 class="archive-title text-xlarge">';
     html += '<a class="link-unstyled" href="' + url_for(category.path) + '">';
-    html += category.name + ' (' + category.length + ')';
+    html += category.name + ' (' + postCnt + ')';
     html += '</a>';
     html += '</h4>';
     html += '<ul class="archive-posts">';
@@ -31,7 +38,10 @@ function displayCategoriesAndPosts(category) {
     posts.sort('date', 'desc').forEach(function(post) {
         if (childCategories.length > 0) {
             return;
-          }
+        }
+        if (post.status === 'ing'){
+            return;
+        }
         html += '<li class="archive-post">';
         html += '<a class="archive-post-title" href="' + url_for(post.path) + '">';
         html += post.title || '(' + __('post.no_title') + ')';

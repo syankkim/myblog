@@ -6,6 +6,7 @@ thumbnail: ''
 permalink: ''
 img : <img width="370" alt="servlet-logo" src="https://user-images.githubusercontent.com/28856435/116650882-fab45480-a9bc-11eb-812f-c29c03474b64.png">
 date: 2021-04-30 10:26:43
+status: 'ing'
 ---
 
 Servlet 개념 잡기 !

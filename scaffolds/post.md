@@ -2,9 +2,10 @@
 title: {{ title }}
 date: {{ date }}
 tags: []
-categories: [☁️☁️]
+categories: [☁️]
 thumbnail: ""
 permalink: ""
+status: ""
 ---
 
 <!-- excerpt -->

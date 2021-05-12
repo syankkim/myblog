@@ -9,7 +9,7 @@ date: 2021-04-29 22:28:01
 
 Service 를 인터페이스로 만드는 이유?
 마치 국룰처럼 1:1로 만드는 이유가 무엇인지 생각해봤다.
-`java` `interface` `SRP` `OOP`
+`#java` `#interface` `#SRP` `#OOP`
 <!-- excerpt -->
 <!-- toc -->
 

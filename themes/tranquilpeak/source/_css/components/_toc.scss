@@ -7,12 +7,21 @@
     color: #164b78;
 }   
 
+.toc-item {
+    line-height: 1.2em;
+}
+
+.toc{
+    padding: 0.6em 1.7em;
+    background-color: #efefef;
+    border-top: 2px solid #ff33b7;
+    border-radius: 0.5em;
+    overflow: auto;
+}
+
 @media #{$large-and-up} {
     .toc{
         width: 16%;
-        overflow: auto;
-        background-color: #efefef;
-        border-radius: 0.5em;
         position: fixed;
         right: 0.5%;
         top: 10%;
@@ -25,10 +34,6 @@
 
 @media #{$medium-and-down} {
     .toc{
-        height: 400px;
-        overflow: scroll;
-        background-color: #efefef;
-        border-radius: 0.5em;
         display: block;
     }
 }

@@ -250,7 +250,9 @@ ubuntu@ip-172-31-33-123:~$ ls -ali *.txt
 ```
 
 * 소프트링크 예시
-  - 아래 코드에서 inode 값을 확인! a.txt 와 a_link 의 inode 값은 다르다.
+  - 아래 코드에서 inode 값을 확인! a.txt 와 a_link.txt 의 inode 값은 다르다.
+`256241` -rw-rw-r-- 1 ubuntu ubuntu 9 May 20 08:54 b.txt
+`256238` lrwxrwxrwx 1 ubuntu ubuntu 5 May 20 08:55 b_link.txt -> b.txt
 ```shell
 ubuntu@ip-172-31-33-123:~$ cat b.txt
 softlink

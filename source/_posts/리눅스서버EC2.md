@@ -1,5 +1,5 @@
 ---
-title: 리눅스서버EC2, 리눅스 기본
+title: 🗯 리눅스서버EC2, 리눅스 기본
 tags: ['linux']
 categories: [☁️ Linux]
 thumbnail: ''

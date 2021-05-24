@@ -179,14 +179,15 @@ $highlight: (
 // name of colors: http://www.color-blindness.com
 $highlight-colors: (
     // Background
-    'white':           #fff,
+    'white':           rgb(214, 214, 210),
     // General color
-    'night-rider':     #333,
+    // 'night-rider':     #333,
+    'night-rider':     #979595,
     'bondi-blue':      #0086b3,
     'persimmon':       #df5000,
     'asparagus':       #63a35c,
     // Comment
-    'pewter':          #969896,
+    'pewter':          #579874,
     'cardinal':        #a71d5d,
     'scampi':          #795da3,
     'bahama-blue':     #1d3e81,
@@ -198,7 +199,7 @@ $highlight-colors: (
     // Addition color for .diff file
     'limeade':         #55a532,
     // Addition background color for .diff file
-    'honeydew':        #eaffea
+    'honeydew':        #4fc44f,
 );
 // Highlight text
 $highlight-text-bg-colors: (

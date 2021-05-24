@@ -1,7 +1,8 @@
 // Official theme for Tranquilpeak
 // Default code block
 pre > code {
-    background: map-get($highlight, 'background');
+    // background: map-get($highlight, 'background');
+    background: #e9e9e9;
     color:      map-get($highlight-colors, night-rider);
 }
 
@@ -16,11 +17,21 @@ code {
     color:      white;
 }
 
+td.code {
+    pre {
+        background: aliceblue;
+        border-radius: 0.5em;
+        padding: 0.3em;
+    }
+}
+
 // Highlight code block
 figure.highlight,
 .codeblock {
-    background: map-get($highlight, 'background');
-    color:      map-get($highlight-colors, night-rider);
+    background: #000000;
+    border-radius: 0.6em;
+    // background: map-get($highlight, 'background');
+    color:  map-get($highlight-colors, night-rider);
 
     figcaption {
         background: map-get($highlight, 'background');
@@ -237,6 +248,9 @@ figure.highlight,
         }
         .params {
             color: map-get($highlight-colors, bahama-blue);
+        }
+        .function {
+            color: map-get($highlight-colors, bondi-blue);
         }
     }
     // JavaScript

@@ -1,5 +1,5 @@
 .toc-text {
-    color: #164b78;
+    color: #868686;
     font-size: 0.7em;
 }
 
@@ -9,6 +9,13 @@
 
 .toc-item {
     line-height: 1.2em;
+    margin-bottom: 10px;
+    ul, ol, dl {
+        margin: 0 0 0.1em 0;
+    }
+    ul {
+        padding-inline-start: 15px;
+    }
 }
 
 .toc{
@@ -16,8 +23,30 @@
     background-color: #efefef;
     border-top: 2px solid #ff33b7;
     border-radius: 0.5em;
-    overflow: auto;
+    overflow-y: auto;
+    max-height: 60%;
+    box-shadow: -2px 3px 9px 0px #1d1d1d6b;
+    color: #868686;
+    font-size: 0.9em;
 }
+
+
+/* 스크롤바 설정*/
+.toc::-webkit-scrollbar{
+    width: 6px;
+}
+
+/* 스크롤바 막대 설정*/
+.toc::-webkit-scrollbar-thumb{
+    height: 17%;
+    background-color: #ff33b738;
+    border-radius: 10px;  
+}
+
+/* 스크롤바 뒷 배경 설정*/
+// .toc::-webkit-scrollbar-track{
+//     background-color: rgba(33,133,133,0.33);
+// }
 
 @media #{$large-and-up} {
     .toc{

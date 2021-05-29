@@ -39,7 +39,7 @@ int main(){
         char buf[255];
         int fd[2], pid, nbytes;
 
-        // 파이프 생성: pipe(fd)= -1이면 ipipe가 생성되지 않은것.
+        // 파이프 생성: pipe(fd)= -1이면 pipe가 생성되지 않은것.
         if(pipe(fd)<0)
                 exit(1); // 종료
 

@@ -4,7 +4,7 @@ tags: ['system_call']
 categories: [☁️ Linux]
 thumbnail: ''
 permalink: ''
-status: 'ing'
+status: ''
 date: 2021-05-24 22:24:11
 ---
 
@@ -113,14 +113,14 @@ int main(){
 ## wait() - 기다림
 >- fork() 함수 호출시 자식 프로세스가 종료할 때까지 `부모 프로세스가 기다린다.`
 >- wait() 자식 프로세스와 부모 프로세스의 동기화, 부모 프로세스가 먼저 죽는 경우를 막기 위해 사용한다. (고아 프로세스: 자식 프로세스가 메모리를 계속 사용하고 있을 수 있다.)
->- 자식 프로세스의 일이 끝나면 부모 프로세스에 SIGCHLD 시그널을 보낸다. 
+>- 자식 프로세스의 일이 끝나면 부모 프로세스에 `SIGCHLD` 시그널을 보낸다. 
 
 ![KakaoTalk_20210526_002054322](https://user-images.githubusercontent.com/28856435/119525382-6a99dd00-bdb9-11eb-9517-fd7ebb48d420.jpg)
 
 <br>
 
 ### wait() 시스템콜 사용
-  - 리턴값은 종료된 자식 프로세스의 pid 이다.
+  - 리턴값은 종료된 `자식 프로세스의 pid` 이다.
 
 ```cpp
 #include <sys/wait.h>
@@ -158,8 +158,11 @@ int main(){
       break;
     default: // pid : 부모
       // 부모프로세스는 자식 프로세스가 끝나길 기다림
+      // status에 자식프로세스의 상태를 담아줌
       child_pid= wait(&status);
       printf("Parent PID(%d), Child PID (%d)\n", getpid(), child_pid)
+
+      // 0 이 아니면 정상종료.
       ret = WIFEXITED(status);
       
       if(ret != 0){
@@ -179,7 +182,76 @@ int main(){
 - execl() 만 사용하면, 부모 프로세스가 사라진다.
  - 이를 유지위해 fork() 로 새로운 공간 복사 후, execl() 사용.
 
-@@@ 실습
+
+* fork_execl_wait.c
+
+```cpp
+#include<unistd.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+#include<sys/wait.h>
+#include<sys/types.h>
+
+#define MAXLINE 64
+
+int main(int argc, char **argv){
+        char buf[MAXLINE];
+        int proc_status;
+        pid_t pid;
+        printf("DaveShell ver 1.0\n");
+
+        while(1){
+            // memset(void *ptr, int value, size_t num);
+            // ptr: 채우고자하는 메모리 시작포인터
+            // value: 메모리에서 채우고자하는값. 1byte마다 0x00(64)로 초기화
+            // sizeof: 배열의 전체 바이트 크기
+            memset(buf, 0x00, MAXLINE);
+
+            // buf 출력해보기
+            // for(int i=0; i<(sizeof(buf)/sizeof(char)); i++){
+            //     printf("%c\n", buf[i]);
+            // }
+
+            // char *fgets (char *string, int n, FILE *stream)
+            // -- 파일에서 최대 MAXLINE-1 만큼 읽어서  buf 에 담음
+            fgets(buf, MAXLINE-1, stdin);
+
+            if(strncmp(buf, "exit\n", 5)==0){
+              // strncmp(buf와 'exit\n' 의 문자열이 size5만큼) 같은지 문자열 비교
+              // exit 를 입력후 enter치면 while문 종료
+                break;
+            }
+
+            buf[strlen(buf)-1]=0x00;
+
+            // 새로운 공간을 만들고 부모프로세스로부터 복사
+            pid= fork();
+            if(pid==0){ // 자식 프로세스
+                // 실행한 사용자의 PATH 환경변수
+                if(execl(buf, buf, NULL)==-1){
+                    printf("command execution is failed\n");
+                    exit(0);
+                }
+            }
+            if(pid>0){
+                wait(NULL); // 자식 프로세스 waiting
+            }
+        }
+        return 0;
+}
+```
+
+* fork_execl_wait 결과
+  - `/bin/ls` 를 입력하면 해당 명령 수행.
+
+```cpp
+~$ ./fork_exec_wait
+DaveShell ver 1.0
+
+/bin/ls
+a.txt  a_link.txt  b.txt  b_link.txt  fork_exec_wait  fork_exec_wait.c
+```
 
 ### copy-on-write(COW) - 프로세스 생성
 > copy-on-write 
@@ -208,7 +280,7 @@ exit(EXIT_FAILURE);
 
 - main 함수의 return 0; 과 exit(0)l 의 차이
  - `exit() ` : 즉시 프로세스를 종료한다. exit()함수 다음에 있는 코드는 실행하지 않는다.
- - `return 0` : 단순히 함수를 종료한다. 단, `main() 함수` 에서는 C 언어 실행파일에 포함된 `_start()` 함수를 호출한 뒤, 결과적으로는 exit() 함수가 호출된다. 
+ - `return 0` : 단순히 함수를 종료한다. 단, `main() 함수` 에서는 C 언어 실행파일에 포함된 `_start()` 함수를 호출한 뒤, 결과적으로는 exit() 함수가 호출된다.
 
  ### exit() 주요동작
  - atexit()에 등록된 함수 실행
@@ -254,15 +326,53 @@ $ see you!
 $ hello
 ```
 
-
-## nice() - 우선순위 변경하기
-
+## 우선순위 기반 스케줄러
 - Priority-Based 스케줄러 (우선순위 스케줄링)
   - 동적/정적
 - 프로세스 중 `root` 가 소유한 프로세스만 우선순위를 높일 수 있다. 그 외의 프로세스는 낮출 수만 있다.
-- 스케줄링 방식에 따라 효과가 없을 수도 있다.
+  - 즉, 일반유저는 nice 값을 증가만 가능하며 root는 nice값을 감소시켜서 우선순위를 높일 수 있다.
+- 스케줄링 방식에 따라 `효과가 없을 수도` 있다.
 
-### 우선순위 변경하기
+### nice
+- 기본값은 보통 `0`으로 시작한다.
+- `-20 ~ 19` 까지 순위값을 조정할 수 있다.
+- 값이 `작을수록` 우선순위가 높다.
+
+```cpp
+#include<unistd.h>
+int nice (int inc);
+```
+
+- `nice -n 10 bash` bash 프로세스 기존값에서 10을 증가 시킨다.
+- 새로운 프로세스가 추가된다.
+
+```shell
+ubuntu@ip-172-31-33-123:~$ ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 R  1000   394 27607  0  80   0 -  7336 -      pts/0    00:00:00 ps
+0 S  1000 27607 27606  0  80   0 -  5814 wait   pts/0    00:00:00 bash
+ubuntu@ip-172-31-33-123:~$ nice -n 10 bash
+ubuntu@ip-172-31-33-123:~$ ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000   461 27607  0  90  10 -  5752 wait   pts/0    00:00:00 bash
+0 R  1000   470   461  0  90  10 -  7336 -      pts/0    00:00:00 ps
+0 S  1000 27607 27606  0  80   0 -  5814 wait   pts/0    00:00:00 bash
+```
+
+### renice
+- nice 와 달리 기존의 PID 로 우선순위를 조정한다.
+- `renice 15 27607` PID 27607의 우선순위를 10->15로 조정
+
+```shell
+ubuntu@ip-172-31-33-123:~$ renice 15 27607
+27607 (process ID) old priority 0, new priority 15
+ubuntu@ip-172-31-33-123:~$ ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000   461 27607  0  90  10 -  5752 wait   pts/0    00:00:00 bash
+0 R  1000   492   461  0  90  10 -  7336 -      pts/0    00:00:00 ps
+0 S  1000 27607 27606  0  95  15 -  5814 wait   pts/0    00:00:00 bash
+```
+### getpriority/setpriority
 - 스케줄링 조작 시스템콜을 기본 제공한다. (POSIX 기반)
 
 ```cpp
@@ -271,10 +381,12 @@ int getpriority(int which, id_t who);
 int setpriority(int which, id_t who, int value);
 ```
 
-`which`
+`which` 옵션
 - 프로세스(PRIO_PROCESS)
 - 프로세스 그룹(PRIO_PGRP)
 - 사용자(PRIO_USER)
+
+* root 소유로 우선순위변경 실행
 
 ```cpp
 #include <sys/resource.h>

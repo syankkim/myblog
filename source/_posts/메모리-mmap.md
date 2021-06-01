@@ -1,5 +1,5 @@
 ---
-title: 메모리_mmap
+title: 🛢 메모리_mmap
 tags: []
 categories: [☁️ Linux]
 thumbnail: ''

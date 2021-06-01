@@ -8,6 +8,9 @@ status: ''
 date: 2021-05-31 17:44:06
 ---
 
+메모리와 관련된 mmap 함수의 사용법을 알아본다.
+stat 함수 사용으로 inode 메타데이터를 출력해본다.
+`#mmap` `#stat` `#inode`
 <!-- excerpt -->
 <!-- toc -->
 

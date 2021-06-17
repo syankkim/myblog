@@ -1,7 +1,7 @@
 ---
 title: 네트워크-OSI모델, 물리계층과 데이터링크계층
 tags: ['network', 'osi_7_layer']
-categories: [☁️ TIL]
+categories: [☁️ Network]
 thumbnail: ''
 permalink: ''
 status: ''

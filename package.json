@@ -22,11 +22,26 @@
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^4.0.0",
     "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0"
+    "hexo-server": "^1.0.0",
+    "jquery": "^3.6.0",
+    "jsdom": "^16.6.0",
+    "node-sass": "^6.0.1",
+    "rand-token": "^1.0.1"
   },
   "devDependencies": {
     "grunt": "^1.4.0",
-    "hexo": "^5.4.0"
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sails-linker": "^1.0.4",
+    "grunt-sass": "^3.1.0",
+    "grunt-sync": "^0.8.2",
+    "grunt-text-replace": "^0.4.0",
+    "hexo": "^5.4.0",
+    "include-all": "^4.0.3"
   },
   "main": "index.js",
   "repository": {

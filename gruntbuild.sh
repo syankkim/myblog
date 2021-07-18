@@ -10,7 +10,7 @@ current=$(pwd)
 
 echo "grunt build will execute at " [${current}]
 
-grunt build
+sudo grunt build
 
 echo "==========================================================================" 
 echo "--- build finish" 

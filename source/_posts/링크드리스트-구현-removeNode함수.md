@@ -1,6 +1,6 @@
 ---
 title: 링크드리스트 구현-removeNode함수
-tags: []
+tags: ['linked_list']
 categories: [☁️ Algorithm]
 thumbnail: ''
 permalink: ''
@@ -106,3 +106,21 @@ class NodeMgt:
             node = node.next
                 
 ```
+
+<br>
+
+# Today...
+
+_
+어느새 2021년의 절반이 훌쩍 넘었다.
+시간은 가고 있지만, 그 지나간 시간만큼 나는 얼마나 무엇을 이뤄냈는지 ..?
+_
+요즘 공부에 신경을 많이 쓰지 못하고 있다. 알고리즘을 어서 습득해야 하는데 말이다 !!
+_
+최근에 mac mini를 사서 개발하는 재미가 쏠쏠하다.
+_
+어떤 결실을 위해서는 꾸준함이 답인것 같다.
+포기하지 말고 한결같이 노력해야 함이다.
+
+...
+

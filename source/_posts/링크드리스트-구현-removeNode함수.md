@@ -1,5 +1,5 @@
 ---
-title: 링크드리스트 구현-removeNode함수
+title: Linked List 구현 - remove 함수
 tags: ['linked_list']
 categories: [☁️ Algorithm]
 thumbnail: ''

@@ -17,44 +17,51 @@ python venv에 Django API 서버 프로젝트 생성하여 띄워본다.
 ---
 
 ## 가상환경
+_mac 기준으로 작성되었습니다._
 
 * 설치
 
 ```bash
-(base) ➜ Django-prj pip3 install virtualenv
+➜ Django-prj pip3 install virtualenv
 ```
 
 * 가상환경 생성
 
 ```bash
-(base) ➜ Django-prj virtualenv venv
+➜ Django-prj virtualenv venv
 ```
 
 * 가상환경 실행
 
+[mac 일 경우]
 ```bash
-(base) ➜  Django-prj source venv/bin/activate
-(venv) (base) ➜  Django-prj 
+➜  Django-prj source venv/bin/activate
+(venv) ➜  Django-prj 
+```
+[window 일 경우]
+```bash
+➜  Django-prj  venv/Scripts/activate
+(venv) ➜  Django-prj 
 ```
 
 ## Django 설치
 
 ```bash
-(venv) (base) ➜ pip3 install django
+(venv) ➜ Django-prj  pip3 install django
 ```
 
 * Django 버전 확인
 
 ```bash
-(venv) (base) ➜  bin python -m django --version
+(venv) ➜  bin python -m django --version
 3.2.5
 ```
 
 ## 프로젝트 폴더 ✔️
 
 ```bash
-(venv) (base) ➜  Django-prj cd venv/bin
-(venv) (base) ➜  bin ls
+(venv) ➜  Django-prj cd venv/bin
+(venv) ➜  bin ls
 __pycache__      activate.fish    activate_this.py pip              pip3.8           python3.8        wheel-3.8
 activate         activate.ps1     django-admin     pip-3.8          python           sqlformat        wheel3
 activate.csh     activate.xsh     django-admin.py  pip3             python3          wheel            wheel3.8
@@ -63,8 +70,8 @@ activate.csh     activate.xsh     django-admin.py  pip3             python3     
 ## Django 기본 프로젝트 생성
 
 ```bash
-(venv) (base) ➜  bin django-admin startproject jansvc
-(venv) (base) ➜  jansvc ll
+(venv) ➜  bin django-admin startproject jansvc
+(venv) ➜  jansvc ll
 total 32
 -rw-r--r--  1 mac  staff     0B  7 22 23:15 __init__.py
 drwxr-xr-x  4 mac  staff   128B  7 22 23:46 __pycache__
@@ -72,7 +79,7 @@ drwxr-xr-x  4 mac  staff   128B  7 22 23:46 __pycache__
 -rw-r--r--  1 mac  staff   3.2K  7 22 23:15 settings.py
 -rw-r--r--  1 mac  staff   748B  7 22 23:15 urls.py
 -rw-r--r--  1 mac  staff   389B  7 22 23:15 wsgi.py
-(venv) (base) ➜  bin cd jansvc
+(venv) ➜  bin cd jansvc
 ```
 
 > **manage.py**: Django 프로젝트와 다양한 방법으로 상호작용 하는 커맨드라인의 유틸리티.
@@ -87,10 +94,10 @@ drwxr-xr-x  4 mac  staff   128B  7 22 23:46 __pycache__
 > Django 프로젝트는 다수의 App이 존재한다.
 
 ```bash
-(venv) (base) ➜  jansvc python3 manage.py startapp blog
-(venv) (base) ➜  jansvc ls
+(venv) ➜  jansvc python3 manage.py startapp blog
+(venv) ➜  jansvc ls
 blog      jansvc    manage.py
-(venv) (base) ➜  jansvc ll blog
+(venv) ➜  jansvc ll blog
 total 40
 -rw-r--r--  1 mac  staff     0B  7 22 23:46 __init__.py
 
@@ -105,16 +112,16 @@ drwxr-xr-x  3 mac  staff    96B  7 22 23:46 migrations
 ## 서버 생성
 
 ```bash
-(venv) (base) ➜  jansvc python3 manage.py migrate
+(venv) ➜  jansvc python3 manage.py migrate
 
-(venv) (base) ➜  jansvc python3 manage.py createsuperuser
+(venv) ➜  jansvc python3 manage.py createsuperuser
 사용자 이름 (leave blank to use 'mac'): sy
 이메일 주소: suyans730@naver.com
 Password:
 Password (again):
 Superuser created successfully.
 
-(venv) (base) ➜  jansvc python3 manage.py runserver
+(venv) ➜  jansvc python3 manage.py runserver
 Watching for file changes with StatReloader
 Performing system checks...
 
@@ -130,3 +137,32 @@ Starting development server at http://127.0.0.1:8000/
 <img width="1976" alt="장고서버생성" src="https://user-images.githubusercontent.com/28856435/126664170-e4f7b116-2e4b-42ba-a11b-89a02ab36965.png">
 
 <br>
+
+# admin 페이지에 model 추가하기
+
+* model.py
+
+```python
+from django.db import models
+
+class User(models.Model):
+    name= models.TextField()
+
+    def __str__(self):
+        return self.name
+```
+
+* admin.py
+
+```python
+from django.contrib import admin
+from .models import User
+
+admin.site.register(User)
+```
+
+* `makemigrations` 명령으로 적용
+
+```bash
+> pip3 manage.py makemigrations
+```

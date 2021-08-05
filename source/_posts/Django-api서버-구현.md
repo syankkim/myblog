@@ -4,12 +4,11 @@ tags: []
 categories: ['☁️ Django']
 thumbnail: ''
 permalink: ''
-status: 'ing'
+status: ''
 date: 2021-07-23 00:04:05
 ---
 
 python venv에 Django API 서버 프로젝트 생성하여 띄워본다.
-최종목표는 내 블로그까지 만들어내기 👍🏼
 `#python` `#django` `#virtualenv`
 <!-- excerpt -->
 <!-- toc -->
@@ -40,7 +39,7 @@ _mac 기준으로 작성되었습니다._
 ```
 [window 일 경우]
 ```bash
-➜  Django-prj  venv/Scripts/activate
+➜  Django-prj source venv/Scripts/activate
 (venv) ➜  Django-prj 
 ```
 
@@ -162,7 +161,14 @@ admin.site.register(User)
 ```
 
 * `makemigrations` 명령으로 적용
+sqlite3에 Blog 클래스를 알려주는 아래 명령어를 사용한다.
+`makemigrations`: Blog class의 속성들을 DB야 알아들으렴
+`migrate`: 알아들었으면 적용하렴
 
 ```bash
 > pip3 manage.py makemigrations
 ```
+
+# 마무리
+여기까지 Django서버를 가상환경에 올리고 직접 글작성도 올려보았는데,
+프론트를 react로 하여서 블로그를 만드려면 새로운 구조를 모색해 봐야겠다.

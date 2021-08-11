@@ -137,7 +137,7 @@ Starting development server at http://127.0.0.1:8000/
 
 <br>
 
-# admin 페이지에 model 추가하기
+## admin 페이지에 model 추가하기
 
 * model.py
 
@@ -169,6 +169,6 @@ sqlite3에 Blog 클래스를 알려주는 아래 명령어를 사용한다.
 > pip3 manage.py makemigrations
 ```
 
-# 마무리
+## 마무리
 여기까지 Django서버를 가상환경에 올리고 직접 글작성도 올려보았는데,
 프론트를 react로 하여서 블로그를 만드려면 새로운 구조를 모색해 봐야겠다.

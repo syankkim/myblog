@@ -3,7 +3,7 @@
 
   // Run fancybox feature
 
-  $(document).ready(function() {
+  jQuery(function() {
     /**
      * Configure and run Fancybox plugin
      * @returns {void}
@@ -16,7 +16,8 @@
         thumbs = true;
       }
 
-      $('.fancybox').fancybox({
+      // $('.fancybox').fancybox({
+      $('[data-fancybox]').fancybox({
         buttons: [
           'fullScreen',
           'thumbs',
@@ -38,4 +39,4 @@
       fancyFox();
     });
   });
-})(jQuery);
+})(jQuery.noConflict());

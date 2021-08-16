@@ -105,5 +105,5 @@ theme: tranquilpeak #next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/ksso730/ksso730.github.io.git
+  repo: https://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@github.com/ksso730/ksso730.github.io.git
   branch: master

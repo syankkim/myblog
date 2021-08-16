@@ -3,8 +3,10 @@ a.link-unstyled {
     &:hover,
     &:active {
         cursor:          pointer !important;
-        color:           inherit !important;
+        // color:           inherit !important;
+        color:           #32d693 !important;
         text-decoration: none !important;
+        font-weight: 500;
     }
     a.link {
         &,

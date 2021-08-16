@@ -1,7 +1,8 @@
 .btn {
     width:          auto;
     height:         auto;
-    background:     white;
+    background:     #1c171a;
+    // background:     white;
     border-radius:  3px;
     padding:        8px 15px;
     margin:         0;
@@ -49,4 +50,8 @@
 
 .btn--small {
     @include button-size-variant(map-get($font-size, small), 8px 15px);
+}
+
+.textarea-outer-wrapper .textarea-wrapper {
+    background: #1c171a;
 }

@@ -36,9 +36,9 @@ h5,
 h6 {
     letter-spacing: -0.04em;
     font-family:    map-get($font-families, 'headings');
-    font-weight:    700;
+    font-weight:    500;
     line-height:    1.45em;
-    color:          #4a4a4a;
+    color:          #d8d8d8;
 }
 
 h1,
@@ -111,7 +111,8 @@ hr {
     margin:     1.5em 0 0;
     outline:    none;
     border:     none;
-    border-top: 1px solid #eef2f8;
+    border-top: 1px solid #4c4c4c;
+    // border-top: 1px solid #eef2f8;
 }
 
 dl {
@@ -149,7 +150,7 @@ code {
     line-height: 2.1rem;
     padding: 0 7px;
     color: #ff33b7;
-    background: #fffcd3;
+    background: #ff33b71a;
     border-radius: 1px;
     margin: 0 0.1em;
 }
@@ -162,15 +163,16 @@ abbr {
 }
 
 blockquote {
-    color: #000000;
+    color: #ffffff;
     border-left:2px solid #ff33b7;
     font-style: initial;
     margin: 1.5em 0 0;
-    background-color: #fff4fedb;
+    background-color: #271f24;
     padding: 3% 3% 3% 3%;
     margin-bottom: 50px;
     line-height: 1.9;
     font-size: 0.9em;
+    border-radius: 0.5em;
 
     cite {
         &:before {

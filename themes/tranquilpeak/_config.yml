@@ -36,6 +36,14 @@ sidebar:
         #     icon: fa fa-search
         #     # `open-algolia-search` classes are used to open algolia search modal
         #     class: open-algolia-search
+        resume:
+            title: resume 👀
+            url: https://nice-spectrum-2aa.notion.site/Suyeon-Kim-09e271916a504e24a5307e9f67d7bc16
+            icon: far fa-smile-wink
+        github:
+            title: github
+            url: https://github.com/ksso730
+            icon: fab fa-github
         home:
             title: global.home
             url: /index.html
@@ -52,16 +60,8 @@ sidebar:
             title: global.tags
             url: /all-tags
             icon: fa fa-tags
-        about me:
-            title: global.about
-            url: /#about
-            icon: fa fa-question
     author_links:
-        github:
-            title: github
-            url: https://github.com/ksso730
-            icon: fab fa-github
-        mail:
+        sns:
             title: life
             url: https://www.instagram.com/syankkim/
             icon: fab fa-instagram

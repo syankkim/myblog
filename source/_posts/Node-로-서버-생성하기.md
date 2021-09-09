@@ -18,7 +18,7 @@ babel로 최신 JavaScript를 사용하자.
 ---
 
 # JavaScript is FREE
-> NodeJS?? 브라우저 밖에서 돌아가는 자바스크립트
+> 📌 NodeJS?? 브라우저 밖에서 돌아가는 자바스크립트
 > `History`
 >- 자바스크립트는 브라우저에서만 사용되었다.
 >    - 브라우저를 가진 모든 컴퓨터는 자바스크립트가 설치되어 있다.
@@ -33,7 +33,6 @@ babel로 최신 JavaScript를 사용하자.
 - 누군가 이미 만들어 놓은 패키지를 가져다 쓰고, 개발을 쉽게 할 수 있다.
     - 그 중 하나가 express이다. 오래된만큼 안정적인 패키지이다.
     - `npm i express`
-- 
 
 # NodeJS 프로젝트 생성
 
@@ -41,13 +40,13 @@ babel로 최신 JavaScript를 사용하자.
 1. 프로젝트 디렉토리 생성
 2. git repository와 연동
 3. express 설치
-4. 
+4. babel 설치, 관련 패키지 설치
 
-## npm init
-- `npm init` 이 명령어 한 줄이면 쉽게 생성 가능하다.
+## 프로젝트 디렉토리 생성
+- 프로젝트를 시작할 빈 디렉토리에서 `npm init` 이 명령어 한 줄이면 쉽게 생성 가능하다.
 - 아래와 같은 프로세스대로 질문이 뜨고 질문에 답하면 package.json 파일이 생성된다.
 
-```shell
+```bash
 (base) ➜  wetube git:(master) npm init
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
@@ -119,7 +118,7 @@ Is this OK? (yes) yes
     - 프로젝트에서 필요 없다면 지워준다.
 - `script` 에 사용할 명령어를 정의하고 아래와 같이 사용할 수 있다.
 
-```shell
+```bash
 (base) ➜  wetube git:(master) ✗ npm run win
 
 > wetube@1.0.0 win /Users/mac/Documents/wetube
@@ -128,7 +127,7 @@ Is this OK? (yes) yes
 hello node
 ```
 
-## express 설치 (with )
+## Express 설치
 
 ```bash
 (base) ➜  wetube git:(master) ✗ npm i express
@@ -149,10 +148,11 @@ added 50 packages from 37 contributors and audited 50 packages in 2.245s
   }
 ```
 
-## Babel 설치
+## Babel 설치, 관련 패키지 설치
 
-> Babel is JavaScript compiler
-아직 nodeJS가 이해하지 못하는 코드가 있다. babel은 우리가 작성한 최신 자바스크립트를 컴파일 해준다. 최신 문법으로 작성하기 위해 `개발자용`으로 설치한다.
+> 📌 Babel is JavaScript compiler
+
+- 아직 nodeJS가 이해하지 못하는 코드가 있다. babel은 우리가 작성한 최신 자바스크립트를 컴파일 해준다. 최신 문법으로 작성하기 위해 `개발자용`으로 설치한다.
 
 ```bash
 npm install --save-dev @babel/core
@@ -197,8 +197,10 @@ __devDependencies__ : 개발자를 위해 필요한 것.
   }
   ```
 
-* babel의 nodemon
-> 파일 수정을 감시해주는 패키지로, 파일이 수정되면 nodemon이 자동으로 재실행해준다.
+### Babel의 nodemon
+
+> 📌 파일 수정을 감시해주는 패키지로, 파일이 수정되면 nodemon이 자동으로 재실행해준다.
+(관련 패키지는 @babel/node")
 
 * `npm run dev` 수행을 위한 명령
 

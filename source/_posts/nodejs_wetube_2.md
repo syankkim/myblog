@@ -1,78 +1,31 @@
 ---
-title: Express의 application을 사용
+title: NodeJS - middleware (feat.morgan)
 tags: [nodejs, express]
 categories: [☁️ NodeJS]
-status: 'ing'
+status: ''
 thumbnail: ''
 permalink: ''
 date: 2021-09-10 16:42:47
 ---
 
-express의 다양한 application을 사용하여 서버와 기본적인 통신을 구현해본다.
-`#express` `#request` `#middleware`
+express의 다양한 application을 사용한 서버와 통신, middleware
+`#express` `#request` `#middleware` `#next()` `#morgan`
 <!-- excerpt -->
 
 <!-- toc -->
 
 ---
 
-```js
-import express from "express";
-
-// *express application생성
-const app = express();
-
-
-// middleware??
-
-// request와 response 중간에 있다.
-// request - middleware - response
-
-// 모든 handler는 controller 이며 middleware 이다.
-// -> next 변수: 
-// const handleEvnt = (req, res, next) => { next(); };
-const middlewr = (req, res, next) => {
-    console.log("middle here");
-    next();
-};
-
-// *요청기능
-const handleEvnt = (req, res) => {
-    // 무언가를 동작
-    console.log("and event");
-    // request 를 종료해준다.
-    // return res.end();
-
-    // text, html 혹은 json으로도 메시지 전달할 수 있다.
-    return res.send("<h1>ByeBye</h1>");
-};
-
-const handleLogin = (req, res) => {
-    return res.send("Login Please");
-};
-
-app.get("/", middlewr, handleEvnt);
-app.get("/login", handleLogin);
-
-// *외부서버 연결
-const PORT = 4001
-const handleListening = () =>
-    console.log(`✅ Server listening on port http://localhost:${PORT}`);
-app.listen(PORT, handleListening);
-// callback 함수? 서버가 시작할때 작동하는 함수
-// port정보를 줘야함.
-
-// HTTP? 가장 안정적이고 오래된 방식. 서버와 통신하는.
-// 브라우저가 대신해서 http request 만들어줌
-```
-
-## middleware 생성
+# middleware ?
 
 > 작업을 다음 함수에게 넘기는 함수.
+const handleEvnt = (req, res, next) => { next(); };
 
 - 모든 controller는 middleware가 될 수 있고, 모든 middleware는 middleware가 될 수 있다.
-- next() 함수를 사용해야, 다음 handler함수가 수행된다.
-- middleware는 요청하는 request를 할 수 없다.
+- 연결이 중단되면 middleware가 아니다.
+- `next()` 함수를 사용하면 다음 get method 가 작동된다.
+- 어떤 조건에 따라 `send() 혹은 next()` 를 호출 할 수 있다.
+- `app.use()` 를 사용한다.
 
 * get() 요청 시, middleware 실행
 
@@ -98,3 +51,111 @@ middle here
 handleEvnt here
 ```
 
+## 모든 route에 적용
+
+> middleware 를 가장 상위에 두면 어떤 url을 접속해도 선행된다.
+
+* request method 와 url을 찍는 logger 라는 middleware 를 생성
+
+```js
+// logger middleware
+const logger = (req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+};
+
+// middleware
+app.use(logger)
+// Home
+app.get("/", handleEvnt);
+```
+
+<br>
+
+* 실행결과
+
+<img width="712" alt="스크린샷 2021-09-12 오후 7 17 09" src="https://user-images.githubusercontent.com/28856435/132984228-4a8fb556-e06c-45a9-adce-9f4ef3fa394e.png">
+
+<br>
+<br>
+
+* root가 아닌 다른 페이지를 호출해도, middleware가 수행됨을 확인
+
+<img width="698" alt="스크린샷 2021-09-12 오후 7 08 31" src="https://user-images.githubusercontent.com/28856435/132984190-b76d253f-ecf2-4d7a-9278-02bb40a3a67e.png">
+
+
+## 특정 url을 확인하는 middleware
+
+> 어떤 조건에 따라 send() 혹은 next() 를 호출 할 수 있다.
+
+* url이 `/protected` 라면, 허용하지 않는다는 메시지를 `send` 한다.
+
+```js
+import express from "express";
+const app = express();
+
+// logger middleware
+const logger = (req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+};
+
+// private middleware
+const privateMiddlewr = (req, res, next) => {
+    const url = req.url;
+    if(url==="/protected"){
+        return res.send("<h1>Not Allowed</h1>")
+    }
+    console.log("allowed, you may continue.");
+    next();
+};
+
+const handleEvnt = (req, res) => {
+    console.log("handleEvnt here");
+    return res.send("<h1>Home</h1>");
+};
+
+const handleProtected = (req, res) => {
+    return res.send("This site is private.")
+};
+
+// app.use 에 넣은 middleware는 get 요청 이전에 수행된다.
+app.use(logger)
+app.use(privateMiddlewr);
+app.get("/", handleEvnt);
+app.get("/protected", handleProtected);
+
+```
+
+<br>
+
+<img width="702" alt="스크린샷 2021-09-12 오후 7 18 27" src="https://user-images.githubusercontent.com/28856435/132984243-2d717221-025c-4f98-a043-65cb2029fb85.png">
+
+<br>
+
+# morgan
+
+> node.js용 request logger middleware 이다.
+설치하고 사용해보자. `npm i morgan`
+
+* 이전 코드에 logger로 만들었던 middleware 대신에 `margan` 을 사용한 logger를 추가해준다.
+
+```js
+import margan from "morgan";
+
+const logger = morgan("dev");
+app.use(logger);
+```
+<br>
+
+* morgan 은 GET, path, status code 모든 정보를 가지고 있다.
+
+```bash
+✅ Server listening on port http://localhost:4001
+allowed, you may continue.
+handleEvnt here
+GET / 200 4.390 ms - 13
+allowed, you may continue.
+GET /favicon.ico 404 2.161 ms - 150
+GET /protected 304 0.395 ms - -
+```

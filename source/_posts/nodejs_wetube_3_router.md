@@ -131,5 +131,5 @@ videoRouter.get("/:id/delete", deleteVideo);
 * 정규식을 사용하여 id 에 숫자만 허용할 수 있다.
 
 ```js
-videoRouter.get("/:id(//d+)", see);
+videoRouter.get("/:id(\\d+)", see);
 ```

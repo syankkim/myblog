@@ -5,7 +5,7 @@
     position:           fixed;
     top:                0;
     // background:         map-get($sidebar, background);
-    background: #1B161A;
+    background: #141414;
     overflow:           auto;
     z-index:            map-get($z-indexes, l-sidebar);
     font-weight: 700;
@@ -54,14 +54,14 @@
 
             .sidebar-button-link {
                 // color:   map-get($sidebar, color);
-                color: #008fe4;
+                color: #5378C6;
                 display: block;
                 height:  100%;
 
                 &:hover,
                 &:active {
                     text-decoration: none;
-                    color:           darken(#008fe4, 15);
+                    color:           darken(#5378C6, 15);
                     // color:           darken(map-get($sidebar, color), 35);
                     border-color: darken($color: #ff1b1ba9, $amount: 0);
                 }

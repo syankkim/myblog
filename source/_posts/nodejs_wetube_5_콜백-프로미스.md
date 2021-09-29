@@ -53,11 +53,12 @@ GET / 304 146.403 ms - -
 
 # promise 함수
 
-> callback 함수의 최신 버전이라고 할 수 있다.
+> async/await
+callback 함수의 최신 버전이라고 할 수 있다. (es8)
 
-`await`는 javascript가 작업을 기다려준다는 의미이다.
-`async`와 `await`는 callback과 달리 직관적이라는 장점이 있다.
-반면에 callback은 callback 함수 내부의 결과값이 가장 마지막에 수행되기 때문에 가독성이 떨어진다.
+`await`는 javascript가 작업을 `기다려준다는 의미이다.`
+async와 await는 callback과 달리 `직관적`이라는 장점이 있다.
+반면에 callback은 callback 함수 내부에서 결과값을 수행하기 때문에, callback 함수 내부의 callback 함수, callback 함수 내부의 callback 함수 .. 이렇게 코드가 깊어져, 가독성이 떨어지게 된다.
 
 * promise
 
@@ -67,4 +68,3 @@ export const home = async(req, res) => {
     return res.render("home", {pageTitle: "Home", videos: []});
 }
 ```
-

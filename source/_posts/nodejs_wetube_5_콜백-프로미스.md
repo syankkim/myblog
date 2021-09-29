@@ -1,8 +1,7 @@
 ---
 title: JS callback & promise
 tags: ['nodejs']
-categories:
-  - ☁️
+categories: [☁️ NodeJS]
 thumbnail: ''
 permalink: ''
 status: ''
@@ -10,6 +9,7 @@ date: 2021-09-25 22:08:20
 ---
 
 mongoose 를 예시로, callback과 promise 함수를 알아본다.
+`#callback` `#promise`
 <!-- excerpt -->
 <!-- toc -->
 

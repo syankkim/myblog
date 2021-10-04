@@ -38,7 +38,7 @@ videoSchema.static('formatHashtags', function (hashtags){
 });
 ```
 
-## regex 연산자(operator)
+## regex 연산자(operator) 사용하기
 mongoose 의 연산자를 사용하여 원하는 검색결과를 얻을 수 있다.
 우리가 사용한 연산자는 regex 이지만, 사이트에 더 많은 방법이 존재한다.
 
@@ -128,5 +128,12 @@ userSchema.pre('save', async function(){
 * 그래서 bcrypt는 compare를 제공한다. 이 함수를 사용하여 기존 비밀번호와 같은지 비교할 수 있다.
 
 ```js
-bcrypt.compare(plaintextPassword, hash);
+const ok = await bcrypt.compare(password, user.password);
+    if (!ok) {
+        return res
+            .status(400).render("login", {
+                pageTitle: "Login",
+                errorMessage: "Wrong password",
+            });
+    };
 ```

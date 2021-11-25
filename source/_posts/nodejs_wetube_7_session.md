@@ -165,7 +165,7 @@ videos
 
 ## Properties of Cookie
 
-- secret: cookie에 sign 할 때 사요하는 string. 안전을 위해서 길고 복잡하고 랜덤한 string을 사용하는것이 좋음.
+- secret: cookie에 sign 할 때 사용하는 string. 안전을 위해서 길고 복잡하고 랜덤한 string을 사용하는것이 좋음.
 - domain: 브라우저는 도메인에 따라 cookie를 저장한다.
 - expires: 세션 만료날짜. maxAge 를 추가해서 사용.
 
